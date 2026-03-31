@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeFriend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="purple">
+  <div class="progress-bar" id="progressBar"></div>
+ 
+  <nav class="topnav">
+    <a href="index.html" class="nav-link">Wendy Li</a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="mailto:liwndy@gmail.com" class="nav-email" title="Email me">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <h1 class="hero-title">BeFriend, helping you understand the relationships that matter.</h1>
+    <div class="hero-meta">
+      <img src="befriend/logo.png" class="project-logo">
+      <div>
+        <div><span style="font-weight:500;">BeFriend</span></div>
+        <div><span style="color:#888;">Design with AI</span></div>
+      </div>
+    </div>
+
+    <img src="befriend/full.png">
+  </section>
+ 
+  <div class="page-wrap">
+ 
+    <!-- ════════ LEFT SIDEBAR ════════ -->
+    <aside class="sidebar-left">
+      <ul class="toc-list" id="tocList">
+        <li><a href="#research" class="active">Research</a></li>
+        <li><a href="#ideation">Ideation</a></li>
+        <li><a href="#design">Final Design</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ul>
+    </aside>
+ 
+    <!-- ════════ MAIN CONTENT ════════ -->
+    <main class="main-content">
+ 
+      <!-- OVERVIEW -->
+      <section class="cs-section" id="overview">  
+      <div class="start-text">
+        <p>
+          Building and maintaining relationships is one of the most meaningful (and messiest) parts of being human. AI, on the other hand, is structured, logical, and not human at all. But what if we could use its clarity to better navigate our own emotional complexity? BeFriend does exactly this: an AI-powered relationship companion that learns from your interactions to support the very human connections that matter most.
+        </p>
+      </div>
+
+      <div class="three-grid top-m">
+        <div>
+          <p class="meta-label">Project Type</p>
+          <div>Class Project</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Team</p>
+          <div>2 IXD Students</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Timeline</p>
+          <div>September - December 2025</div>
+        </div>
+      </div>
+ 
+      <div class="divider"></div>
+
+      <div class="small-container">
+        <p class="section-label">Initial Research</p>
+        <h2>Understanding modern relationship challenges.</h2>
+        <div class="prose">
+          <p>
+            We began by exploring why relationships are often difficult to navigate. Miscommunication, emotional bias, and lack of self-awareness frequently create friction, even in close connections. At the same time, people are increasingly turning to digital tools for self-reflection and support, from journaling apps to therapy platforms. This raised an opportunity: could AI offer structured, objective guidance in moments where emotions feel overwhelming?
+          </p>
+
+          <p>
+            To ground our thinking, we conducted desk research on AI in communication, and we complemented this with user interviews to understand how people currently handle relationship challenges.
+          </p>
+        </div>
+      </div>
+
+      <div class="img-wrapper top-m">
+        <img src="befriend/research.png"/>
+        <span class="img-caption-light">Desk Research</span>
+      </div>
+
+      <div class="small-container top-xl">
+        <div class="section-label">User Persona</div>
+        <h3>A Gen Z in the digital age seeking real human connections.</h3>
+
+        <div class="prose">
+            <p>From our research insights, we built an interactive persona, <a href="https://gemini.google.com/gem/aeaada0f1c85">which you can access here</a>. Although our target audience primarily falls within the Gen Z and Generational Alpha age groups, we recognized that our app has the potential to support anyone seeking to improve their relationships through AI.
+            </p>
+        </div>
+      </div>
+
+      <img src="befriend/audience.png" class="top-m">
+
+      <div class="small-container top-xl">
+        <div class="prose">
+        <p>The Esther persona reflects common Gen Z behaviors, and her challenges illustrate a broader need for emotional clarity and personalized support in both digital and in-person communication, the core problem our solution aims to address.</p>
+        </div>
+      </div>
+
+      <img src="befriend/hmw.png" class="top-m">
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="cs-section" id="ideation">
+        <div class="small-container">
+          <div class="section-label">Ideation</div>
+          <h2>Exploring how AI could support relationships.</h2>
+
+          <div class="prose">
+            <p>After understanding the emotional gaps in digital communication, we began exploring how an AI tool could meaningfully support users like Esther. To do this, we explored two processes using Gemini:</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="befriend/ideation-1.png">
+            <div class="grid-panel-details">
+              <h4>Initial concept sketches</h4>
+              <p>Low-fidelity drawings helped map out possible chat flows, home screen layouts, and how users might add people in their lives. Sketching allowed quick experimentation before committing to any visual style or feature set.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="befriend/ideation-2.png">
+            <div class="grid-panel-details">
+              <h4>App moodboard</h4>
+              <p>We next captured the emotional tone of the app through a moodboard, meant to be soft, supportive, modern, and slightly playful. This helped define how the product should feel: approachable, human, and emotionally intelligent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Concept to Wireframe</div>
+          <h2>From broad ideas to a focused vision for BeFriend, bringing structure to emotion.</h2>
+          <div class="prose">
+            <p>After shaping the core concept, we moved into wireframing using Figma Make to define the foundation of Befriend’s experience. The goal wasn’t visual polish yet, and instead, it was clarity, hierarchy, and interaction flow. In Figma Make, we explored wireframes.</p>
+          </div>
+        </div>
+
+        <img src="befriend/lofi.png" class="top-m">
+
+        <div class="small-container top-xl">
+          <div class="prose" data-note-id="bf-1">
+            <p>Through this, we now had a foundation for the features on our app’s home page, what the relationship page could look like, and more. However, as we thought more about the app’s purpose, we felt that the app was trying to do too much, and that a lot of the features might not be relevant to user needs.</p>
+
+            <p>This led to us cutting back down on features and focusing on what really mattered, which was nothing more than a space for users to understand and get guidance on their relationships. We then re-identified what core features we needed:</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="befriend/midfi-1.png">
+            <div class="grid-panel-details">
+              <h4>Home with easy discoverability</h4>
+              <p>Quickly see all the people they’ve added, understand relationship highlights at a glance, and effortlessly add new connections.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+            <img src="befriend/midfi-2.png">
+            <div class="grid-panel-details">
+              <h4>Chat for advice and reflection</h4>
+              <p>Talk to the AI about a specific person, upload screenshots, ask for tone reads, or get communication support without friction..</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-container top-xl">
+        <div class="section-label">Prototype</div>
+        <h3>Now with our redefined direction, we manually refined the visual language and defined the interaction patterns.</h3>
+
+        <div class="prose">
+          <p>When we prototyped BeFriend, we knew that supporting real human relationships required more than just AI, so we grounded the prototype in three core principles.</p>
+        </div>
+      </div>
+
+      <div class="three-grid top-m">
+        <div class="grid-panel">
+            <img src="befriend/principle-1.png">
+            <div class="grid-panel-details">
+              <h4>Privacy & emotional safety first</h4>
+              <p>Relationships involve sensitive, deeply personal information. BeFriend is designed to create a space where users feel safe sharing openly where trust isn’t optional — it’s foundational.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+            <img src="befriend/principle-2.png">
+            <div class="grid-panel-details">
+              <h4>Advice that adapts</h4>
+              <p>BeFriend learns from context and preferences to provide advice that feels relevant. The goal is not just to respond, but to respond appropriately to the nuance of each situation.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+            <img src="befriend/principle-3.png">
+            <div class="grid-panel-details">
+              <h4>AI supports, never replaces.</h4>
+              <p>BeFriend is not meant to take over human connection, but to strengthen it. It acts as a guide for communication to help users show up more thoughtfully in their relationships.</p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="cs-section" id="design">
+        <div class="center-container">
+          <div class="section-label top-xl">Final Design</div>
+          <h2>BeFriend: better connections start here.</h2>
+        </div>
+
+        <img src="befriend/final.png" class="top-s">
+
+        <div class="small-container top-xl">
+          <div class="section-label">Onboarding</div>
+          <h3>Understanding and following Duolingo's design language for the new feature.</h3>
+
+          <div class="prose">
+            <p>Befriend’s onboarding begins with the standard setup you’d expect, such as name, email, and basic account creation. We kept this portion lightweight to reduce friction and get users into the experience quickly while aligning to one's mental model.</p>
+          </div>
+        </div>
+
+        <img src="befriend/onboarding-1.png" class="top-m">
+
+        <div class="small-container top-m">
+          <div class="prose">
+            <p>Beyond the basics, onboarding also introduces a few thoughtful touches tailored to the emotional, secure nature of BeFriend:</p>
+          </div>
+        </div>
+
+        <img src="befriend/onboarding-2.png" class="top-m">
+
+        <div class="small-container top-xl">
+          <div class="section-label">Adding a Relationship</div>
+          <h3>Making BeFriend uniquely yours.</h3>
+
+          <div class="prose">
+            <p>After onboarding, users are guided to add their first relationship, which is the core action that shapes the entire BeFriend experience. To avoid overwhelming users, context input is optional but encouraged, such as their interests, shared history, etc.</p>
+
+            <p>As a security and privacy reminder, we included another reassurance message that appears before you add a person: “Your information stays with you. Nothing you share here is used outside this app.”</p>
+          </div>
+        </div>
+
+        <img src="befriend/add.png" class="top-m">
+
+        <div class="small-container top-xl">
+          <div class="section-label">Chat Interface</div>
+          <h3>A space built for reflection.</h3>
+
+          <div class="prose">
+            <p>The chat interface is the heart of BeFriend. It’s where users come to understand their relationships, process emotions, decode messages, and get guidance based on real context. Early testers often assumed the chat might message the actual person, so clarity became a central design priority.</p>
+
+            <p>When you first start chatting, a message appears: “You’re chatting with BeFriend. Ask anything about your relationship, messages, or how to communicate better.”</p>
+          </div>
+        </div>
+
+        <img src="befriend/chat-1.png" class="top-m">
+
+        <div class="small-container top-m">
+          <div class="prose">
+            <p>In this prototyped example, when the user opens Minji’s chat, they’re greeted with an interface personalized with:</p>
+          </div>
+        </div>
+
+        <img src="befriend/chat-2.png" class="top-m">
+
+        <div class="small-container top-xl">
+          <div class="section-label">App responses</div>
+          <h3>Growing and learning over time.</h3>
+
+          <div class="prose">
+            <p>As the relationship evolves, so does the chat. At day 1, BeFriend guesses what the user might be interested in conversing about based on their initial inputs. By day 7, BeFriend notices patterns in the relationship between the user and their relation. By day 30, it anticipates user needs and offers more personalized advice. And by month 6, it reflects the entire relationship arc with real perspective.</p>
+          </div>
+        </div>
+
+        <img src="befriend/grow.png" class="top-m">
+
+        <div class="small-container top-xl">
+          <div class="section-label">For various relationships</div>
+          <h3>Built across scenarios.</h3>
+
+          <div class="prose">
+            <p>While the Minji example follows a budding romantic connection, BeFriend isn’t designed solely for dating or situationships. The app supports a wide spectrum of human relationships.</p>
+
+            <p>The chat interface adapts dynamically to each category, adjusting prompts, tone, and insights to match the relationship type!</p>
+          </div>
+        </div>
+
+        <img src="befriend/prompts.png" class="top-m">
+      </section>
+
+      <div class="divider"></div>
+
+        <section class="reflection" id="reflection">
+          <div class="small-container">
+            <div>
+              <div class="section-label">Why BeFriend?</div>
+              <h3>Built for people, not prompts.</h3>
+            </div>
+          </div>
+
+          <img src="befriend/compare.png" class="top-s">
+
+          <div class="three-grid top-s">
+            <div class="grid-panel-details">
+              <h4>Remembers people in your life</h4>
+              <p>Each relation gets their own space, history, context. The user doesn’t have to re-explain who someone is or remind it what happened last week. BeFriend gives users personalized chats based on their ongoing story with them.</p>
+            </div>
+
+            <div class="grid-panel-details">
+              <h4>Built in real-world interactions</h4>
+              <p>BeFriend doesn’t just respond to prompts in a vacuum. it can interpret screenshots, texts, awkward moments, and “what just happened” situations. It reads tone, vibes, and patterns from the actual conversations the user is having.</p>
+            </div>
+
+            <div class="grid-panel-details">
+              <h4>Isn’t designed to agree with you</h4>
+              <p>Unlike a chat model that might validate, BeFriend pushes its users to think more deeply. It helps them reflect on their role, consider other person’s perspective, and make choices that are healthier and more intentional ❤️</p>
+            </div>
+          </div>
+
+          <div class="small-container top-xl">
+            <div class="section-label">Reflection</div>
+            <h3>Designing tech for something deeply human</h3>
+            <div class="prose">
+              <p>Working on this project made us realize just how much space there is for technology to support our emotional lives. When designed with intention, it can actually help us navigate some of the most human experiences we have, and we learned how something inherently technical can become softer through thoughtful design choices: tone, visual language, explainability, and the gentle pacing of interactions.</p>
+
+              <p>More importantly, BeFriend taught us how design can bridge the gap between machine intelligence and human complexity. The goal was never to have AI speak for us, but to help us understand ourselves and others better. In the end, this project reminded me that technology doesn’t have to strip away humanity. With care, it can amplify it, helping people show up in their relationships with more confidence, compassion, and intention.</p>
+            </div>
+
+            <div class="thank-you top-m">
+            <div>And a thank you to...</div>
+            <p>Jeffrey Yang and my professor, Pamela Pavliscak! This class taught me how to navigate both the tools and responsibilities of designing with AI, especially in emotionally complex spaces!</p>
+          </div>
+          </div>
+        </section>
+      </section>
+    </main>
+ 
+    <!-- ════════ RIGHT NOTES COL ════════ -->
+    <aside class="notes-col" id="notesCol" aria-label="Margin notes"></aside>
+ 
+  </div>
+
+    <div class="footer">
+    <div class="left-footer">
+      <a href="mailto:liwndy@gmail.com" class="nav-link">Email</a>
+      <a href="https://www.linkedin.com/in/wantongl/" class="nav-link">LinkedIn</a>
+      <a href="https://docs.google.com/document/d/1pJCMrsLGELuIBm1lkuZ4Rl2dKCiufdXss0PyfWRx3mM/edit?usp=sharing" class="nav-link">Resume</a>
+    </div>
+
+    <div>© Wendy Li</div>
+  </div>
+  
+<script>
+  const NOTES = [
+    {
+    id:    'bf-1',
+    text:  'Was there really a need to know about today’s fortune? Or even a ‘recent energy’ bar? How would those help users feel more confident and guided about their relationships beyond just visual fluff?'
+    },
+  ];
+</script>
+
+<script src="app.js"></script>
+<script src="sidenote.js"></script>
+
+<script>
+  buildNotes(NOTES);
+</script>
+</body>
+</html>

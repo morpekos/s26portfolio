@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Too Good to Go</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="teal">
+  <div class="progress-bar" id="progressBar"></div>
+ 
+  <nav class="topnav">
+    <a href="index.html" class="nav-link">Wendy Li</a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="mailto:liwndy@gmail.com" class="nav-email" title="Email me">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <h1 class="hero-title">Bagel, creating a unifed and scalabledesign recipe for Too Good to Go.</h1>
+    <div class="hero-meta">
+      <img src="tgtg/logo.png" class="project-logo">
+      <div>
+        <div><span style="font-weight:500;">Too Good to Go</span> (*Not Affilidated)</div>
+        <div><span style="color:#888;">Design System</span></div>
+      </div>
+    </div>
+
+    <img src="tgtg/full.png">
+  </section>
+ 
+  <div class="page-wrap">
+ 
+    <!-- ════════ LEFT SIDEBAR ════════ -->
+    <aside class="sidebar-left">
+      <ul class="toc-list" id="tocList">
+        <li><a href="#overview" class="active">Problem Space</a></li>
+        <li><a href="#foundation">Foundation</a></li>
+        <li><a href="#component">Component</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ul>
+    </aside>
+ 
+    <!-- ════════ MAIN CONTENT ════════ -->
+    <main class="main-content">
+ 
+      <!-- OVERVIEW -->
+      <section class="cs-section" id="overview">  
+      <div class="start-text">
+        <p>
+          Too Good To Go rescues perfectly good food from being wasted, but their product ecosystem was starting to feel a little stale. That’s where Bagel comes in: a fresh, cohesive design system my team and I created to bring consistency, clarity, and flavor back to the interface. In this project, we baked a full set of tokens, components, and documentation to help the brand scale with confidence.
+        </p>
+      </div>
+
+      <div class="three-grid top-m">
+        <div>
+          <p class="meta-label">Project Type</p>
+          <div>Class Project</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Team</p>
+          <div>4 IXD Students</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Timeline</p>
+          <div>January – April 2025</div>
+        </div>
+      </div>
+ 
+      <div class="divider"></div>
+
+      <div class="small-container">
+        <p class="section-label">About the App</p>
+        <h2>Too Good to Go is a global food-saving app with a growing product ecosystem.</h2>
+        <div class="prose">
+          <p data-note-id="tgtg-1">
+            Too Good To Go is a mission-driven company and mobile-first platform that helps people rescue surplus food from local restaurants, cafes, and grocery stores. Users can purchase discounted “surprise bags,” reducing waste while supporting their communities.
+          </p>
+          <div class="inline-note">
+            <p>This project began in September 2025, and the interface reflects the app’s UI as it existed then.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-wrapper">
+        <img src="tgtg/old.png" />
+        <span class="img-caption">TGTG Interface</span>
+      </div>
+
+      <div class="small-container top-s">
+        <div class="section-label top-xl">Problem</div>
+        <h3>However, as the app expanded, its product ecosystem grew rapidly, and most importantly, not always cohesively.</h3>
+      </div>
+
+      <div class="three-grid top-m">
+        <div class="grid-panel">
+          <img src="tgtg/problem-1.png">
+          <div class="grid-panel-details">
+            <h4>Foundational Inconsistencies</h4>
+            <p>Core brand elements were applied inconsistently across screens, resulting in an experience that felt fragmented rather than cohesive.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+          <img src="tgtg/problem-2.png">
+          <div class="grid-panel-details">
+            <h4>Variations in UI Elements</h4>
+            <p>UI elements appeared in multiple variations, suggesting components were frequently rebuilt instead of reused, leading to visual inconsistency.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+          <img src="tgtg/problem-3.png">
+          <div class="grid-panel-details">
+            <h4>Inefficient Workflows</h4>
+            <p>Because styles and components weren’t standardized, designers and developers spent more time fixing inconsistencies instead of building new features.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-container top-xl">
+        <h3>Without a unified system, the product became harder to scale, harder to maintain, and more difficult to keep cohesive across surfaces.</h3>
+        <div class="prose">
+          <p>This led to the formation of our problem statement.</p>
+        </div>
+
+        <img src="tgtg/hmw.png" class="top-m">
+
+        <div class="prose top-m">
+          <p>And, a centralized design system emerged as the clear solution.</p>
+        </div>
+      </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="cs-section" id="foundation">
+        <div class="small-container">
+          <div class="section-label">Foundation</div>
+          <h2>To kickoff, we got started by deconstructing the building blocks of core screens.</h2>
+
+          <div class="prose">
+            <p data-note-id="tgtg-2">Our first step was to break down the screens users interact with the most. Rather than looking at the product surface-level, we zoomed in, dissecting each page into its smallest parts to reveal the patterns, inconsistencies, and visual language.</p>
+
+            <p>By doing this, it served as the groundwork for defining the visual and structural groundwork that Bagel would eventually build upon.</p>
+          </div>
+        </div>
+
+        <div class="img-wrapper top-m">
+          <img src="tgtg/deconstructed.png" />
+          <span class="img-caption-light">Deconstruct a System</span>
+        </div>
+
+        <div class="small-container top-xl">
+          <h3>Kneading the foundational ingredients of the design system.</h3>
+
+          <div class="prose">
+            <p>The foundations of Bagel establish the shared building blocks that bring consistency and cohesion across Too Good To Go. We definined clear rules for color, typography, iconography, layout, and spacing, creating a reliable baseline that teams can build from with confidence.</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="tgtg/foundation-1.png">
+            <div class="grid-panel-details">
+              <h4>Semantic Variables</h4>
+              <p>One challenge was defining color tokens, as the interface used inconsistent gray shades. We aligned on a primary gray and built a cohesive, semantic palette based on function rather than appearance—reducing guesswork and improving consistency across screens.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/foundation-2.png">
+            <div class="grid-panel-details">
+              <h4>Color Accessibility</h4>
+              <p>Another challenge was accessibility. Many color combinations failed WCAG contrast standards, so we refined the palette and established clear usage guidelines, documenting them to ensure accessibility is applied consistently as the system evolves.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-container top-xl">
+          <div class="section-label">Solution</div>
+          <h2>A cohesive foundation that standardizes design decisions and drives visual consistency.</h2>
+
+          <img src="tgtg/foundations.png" class="top-m" data-note-id="tgtg-3">
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="cs-section" id="component">
+        <div class="small-container">
+          <div class="section-label top-xl">Principles</div>
+          <h3>Shaping the core values that hold Bagel together: a system that reflects Too Good To Go’s mission.</h3>
+
+          <div class="prose">
+            <p>Between defining foundations and building components, we worked on establishing principles to guide every decision. This process was a no-brainer: we knew our principles had to be shaped to reflect both product needs and Too Good To Go’s broader mission.</p>
+
+            <p>Below highlights the five principles that define Bagel:</p>
+          </div>
+        </div>
+
+        <img src="tgtg/principles.png" class="top-m">
+
+        <div class="center-container top-xl">
+          <div class="section-label">Component</div>
+          <h2>From ingredients to interface, we next baked out the component library.</h2>
+        </div>
+
+        <img src="tgtg/components.png" class="top-s">
+
+        <div class="small-container top-xl">
+          <h3>Building a reusable component library to ensure consistency and speed across the product</h3>
+          <div class="prose">
+            <p>We focused on translating our principles into reusable, flexible components. From avatars, input fields, navigation, to search bars, our components serve as building blocks of the product.</p>
+
+            <p>Previously, components were often recreated from scratch, leading to visual inconsistencies and inefficiencies in both design and development. By standardizing components and defining clear usage guidelines, we created a reusable system that streamlines workflows and ensures a more cohesive user experience as the product scales.</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="tgtg/component-1.png">
+            <div class="grid-panel-details">
+              <h4>Flexible Components</h4>
+              <p>Each component was designed to be robust, supporting use cases. A key example of this is the card component. I designed a single, robust horizontal card component that could flex across multiple contexts rather than a one-off solution.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/component-2.png">
+            <div class="grid-panel-details">
+              <h4>Patterns</h4>
+              <p>We also created patterns, reusable solutions for recurring UI structures, such as carousels, chip bars, and list layouts. They capture how components work together in real scenarios to reduce creating the same layouts and interactions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-m">
+          <div class="prose">
+            <p>👉 For our full UI kit, <a href="https://www.figma.com/community/file/1570116303087749961">you can check it out here!</a></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="cs-section" id="documentation">
+        <div class="center-container">
+          <div class="section-label">Documentation</div>
+
+          <h2>Every aspect of Bagel was documented to provide the team with a shared source of truth.</h2>
+        </div>
+
+        <img src="tgtg/documentation.png" class="top-s">
+
+        <div class="small-container center-container top-s">
+          <div class="prose">
+            <p>With the foundations and components in place, documentation became the bridge between the system and the people using it. <a href="https://zeroheight.com/40961d8dd/p/39b4d1-bagel-design-system">We centralized everything in Zeroheight</a>, creating a shared source of truth for designers, developers, and stakeholders.</p>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Highlights</div>
+          <h3>From documentation, socialization, to governance.</h3>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="tgtg/document-1.png">
+            <div class="grid-panel-details">
+              <h4>Getting Started</h4>
+              <p>The introduction section lowers the barrier to adoption. These include step-by-step guides help designers and developers quickly understand why and how to use Bagel in their workflows, so that we can help team members start building independently and with confidence.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/document-2.png">
+            <div class="grid-panel-details">
+              <h4>Clear Usage Rules</h4>
+              <p>Rather than simply listing components, the documentation explains how and when to use them, outlines best practices and accessibility guidelines, and provides clear do’s and don’ts. These are applied to every foundation, component, and patterns so we leave no guesswork.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/document-3.png">
+            <div class="grid-panel-details">
+              <h4>Anatomy and Variants</h4>
+              <p>Each component is broken down into its core anatomy and supported by clearly defined variants, making it easier for designers and developers to understand how components are built and how they adapt across different use cases — a balance of customization and efficiency!</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/document-4.png">
+            <div class="grid-panel-details">
+              <h4>Governance Policies</h4>
+              <p>To ensure Bagel remains sustainable over time, we established governance guidelines. These outline how to contribute and how changes are communicated, creating transparency around how the system evolves and establishing trust that Bagel is being actively maintained.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-m">
+          <div class="prose">
+            <p>👉 For our full documentation, <a href="https://zeroheight.com/40961d8dd/p/39b4d1-bagel-design-system">you can check it out here!</a></p>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Why Bagel?</div>
+          <h2>How Bagel elevates the product experience, from design to development.</h2>
+        </div>
+
+        <div class="three-grid top-m">
+          <div class="grid-panel">
+            <img src="tgtg/why-1.png">
+            <div class="grid-panel-details">
+              <h4>Consistency at scale</h4>
+              <p>Shared foundations, components, and patterns ensure experiences feel cohesive across every screen on the product and team.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/why-2.png">
+            <div class="grid-panel-details">
+              <h4>Fast, efficient workflows</h4>
+              <p>Reusable components and clear documentation reduce duplicated effort and speed up design and development.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="tgtg/why-3.png">
+            <div class="grid-panel-details">
+              <h4>Built-in sustainability</h4>
+              <p>Accessible foundations and semantic guidelines help teams design inclusively while minimizing wasted work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <div class="divider"></div>
+
+        <section class="reflection" id="reflection">
+          <div class="two-grid">
+            <div>
+              <div class="section-label">Reflection</div>
+              <h3>The importance of designing with scalability in mind!</h3>
+
+              <div class="prose">
+                <p>One of my biggest takeaways came from rethinking how I approached list items. At first, separate list item components were created for each use case across the interface, and I realized it wouldn’t scale as new content types were introduced.</p>
+
+                <p>I shifted toward a standardized list item component designed with flexibility at its core. This way, I created a solution that scales more gracefully and reduces the need for future rework.</p>
+
+                <p>In future projects, I hope to approach design with scalability in mind from the outset, thinking beyond immediate use cases to anticipate how design might evolve as products grow. This mindset will help me design systems (get it? 😉) that are more resilient, efficient, and scalable!</p>
+              </div>
+            </div>
+
+            <img src="tgtg/learning.png">
+          </div>
+
+          <div class="thank-you top-m">
+            <img src="tgtg/team.png">
+            <div class="top-s">And a thank you to...</div>
+            <p>my teammates, Carol Bai, Rohini Raj Rajan, Shreya Lohakare, and my professor, Craig McDonald. Design systems once felt like a daunting, mountainous task... and while they <i>still</i> are, this project taught me how to approach them with confidence!</p>
+          </div>
+        </section>
+      </section>
+    </main>
+ 
+    <!-- ════════ RIGHT NOTES COL ════════ -->
+    <aside class="notes-col" id="notesCol" aria-label="Margin notes"></aside>
+ 
+  </div>
+
+    <div class="footer">
+    <div class="left-footer">
+      <a href="mailto:liwndy@gmail.com" class="nav-link">Email</a>
+      <a href="https://www.linkedin.com/in/wantongl/" class="nav-link">LinkedIn</a>
+      <a href="https://docs.google.com/document/d/1pJCMrsLGELuIBm1lkuZ4Rl2dKCiufdXss0PyfWRx3mM/edit?usp=sharing" class="nav-link">Resume</a>
+    </div>
+
+    <div>© Wendy Li</div>
+  </div>
+
+<script>
+  const NOTES = [
+    {
+    id:    'tgtg-1',
+    text:  'This project began in September 2025, and the interface reflects the app’s UI as it existed then.'
+    },
+    {
+    id:    'tgtg-2',
+    text:  'Following Brad Frost’s method for creating an interface inventory, we captured every distinct UI element across the chosen screens.'
+    },
+    {
+    id:    'tgtg-3',
+    text:  'A snapshot of four of Bagel’s six core design foundations!'
+    },
+  ];
+</script>
+
+<script src="app.js"></script>
+<script src="sidenote.js"></script>
+
+<script>
+  buildNotes(NOTES);
+</script>
+</body>
+</html>
