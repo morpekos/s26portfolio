@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wendy Li / Lyft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="yellow">
+  <div class="progress-bar" id="progressBar"></div>
+ 
+  <nav class="topnav">
+    <a href="index.html" class="nav-left">
+      <img src="snorlax.png" class="logo">
+      <div class="nav-link">Wendy Li</div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="mailto:liwndy@gmail.com" class="nav-btn">Reach Out</a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <h1 class="hero-title">Streamlining ride setups for organizations and their riders.</h1>
+    <div class="hero-meta">
+      <img src="lyft/logo.png" class="project-logo">
+      <div>
+        <div><span style="font-weight:500;">Lyft</span></div>
+        <div><span style="color:#888;">Product Design</span></div>
+      </div>
+    </div>
+
+    <img src="lyft/full.png" class="top-m">
+  </section>
+ 
+  <div class="page-wrap">
+ 
+    <!-- ════════ LEFT SIDEBAR ════════ -->
+    <aside class="sidebar-left">
+      <ul class="toc-list" id="tocList">
+        <li><a href="#overview" class="active">Opportunity Space</a></li>
+        <li><a href="#final-design">Final Design</a></li>
+        <li><a href="#reflection">Personal Reflection</a></li>
+      </ul>
+    </aside>
+ 
+    <!-- ════════ MAIN CONTENT ════════ -->
+    <main class="main-content">
+ 
+      <!-- OVERVIEW -->
+      <section class="cs-section" id="overview">  
+      <div class="prose">
+        <p>Booking a ride sounds simple — until you're doing it on behalf of someone else, for a specific appointment window, for a rider who may not even have a smartphone. Lyft Concierge is built for exactly this: healthcare facilities, automotive organizations, and other companies that coordinate transportation for the people they serve. As a product design intern at Lyft, I spent twelve weeks reducing friction in the Concierge web booking flow, making it faster, clearer, and less prone to error.</p>
+      </div>
+
+      <div class="three-grid top-m">
+        <div>
+          <p class="meta-label">Project</p>
+          <div>Product Design Internship</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Team</p>
+          <div>UXR, Engineering, PM, Content</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Timeline</p>
+          <div>May – August 2025</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="small-container">
+        <p class="section-label">Opportunity Space</p>
+        <h2>When transportation is part of the care journey.</h2>
+        <div class="prose top-s">
+          <p data-note-id="note-1">
+            Lyft Concierge riders are often older adults, patients, or individuals without access to smartphones, which means they rely on coordinators to book rides on their behalf for appointments. Unlike typical Lyft rides, these trips are often scheduled in advance, tied to strict appointment windows, and may involve riders with limited mobility, health concerns, or heightened anxiety around travel.
+          </p>
+        </div>
+      </div>
+
+      <div class="img-wrapper">
+        <img src="noteful/old.png" class="top-m">
+        <div class="img-caption">Original App</div>
+      </div>
+
+      <div class="small-container top-xl">
+        <div class="section-label">The Problem</div>
+        <h3>The date and time selector on Concierge Web presents a suboptimal user experience.</h3>
+
+        <div class="prose top-s">
+          <p>At the center of that booking flow sits the date and time selector, and it wasn't meeting the demands of the context.</p>
+        </div>
+      </div>
+
+      <div class="three-grid top-m">
+        <div class="grid-panel">
+          <img src="lyft/problem-1.png">
+          <div class="grid-panel-details">
+            <h4>Time-consuming process</h4>
+            <p>Coordinators scroll through 10-minute increments starting at 12:00AM, a tedious experience for someone managing multiple bookings under time pressure.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+          <img src="lyft/problem-2.png">
+          <div class="grid-panel-details">
+            <h4>Susceptibility to error</h4>
+            <p>Moving quickly makes mistakes easy. Selecting 1:00AM vs. 1:00PM is a real risk, and a single slip can mean a misbooked ride and a rider who never gets picked up.</p>
+          </div>
+        </div>
+
+        <div class="grid-panel">
+          <img src="lyft/problem-3.png">
+          <div class="grid-panel-details">
+            <h4>Unclear ride request types</h4>
+            <p>Concierge supports three pickup types, but they're buried in the time selector with little context or visual distinction, making them easy to overlook entirely.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-container top-m">
+        <div class="prose">
+          <p>For coordinators managing rides across tight schedules, a suboptimal experience introduces unnecessary cognitive load and room for error. In a workflow where precision directly impacts someone's care, that's a problem worth solving carefully.</p>
+        </div>
+      </div>
+
+      <div class="center-container small-container">
+        <p class="section-label top-xl">My Work</p>
+        <h2>Focusing on the high-impact decisions coordinators make every booking.</h2>
+
+        <div class="prose top-s">
+          <p>My work centered on how coordinators choose timing, understand and select ride options, and specify pickup locations, ensuring these high-impact moments in the flow were clear, flexible, and error-resistant. Specifically, I:</p>
+        </div>
+      </div>
+
+      <img src="lyft/timeline.png" class="top-m">
+
+      <div class="small-container three-grid top-m">
+        <div class="grid-panel-2">
+          <h4>Shipped improvements to every ride booked.</h4>
+          <p>I delivered key product updates that power every web booking to ensure users are met with a more satisfactory experience.</p>
+        </div>
+
+        <div class="grid-panel-2">
+          <h4>Collaborated across multiple disciplines.</h4>
+          <p>I partnered cross-functionally to bring in feedback and align everyone involved, from problem discovery to implementation.</p>
+        </div>
+
+        <div class="grid-panel-2">
+          <h4>Ramped up on a complex product space.</h4>
+          <p>I quickly onboarded and immersed into the complexity of Lyft Concierge, to design with empathy for users and product thinking for the business.</p>
+        </div>
+      </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- FINAL -->
+      <section class="cs-section" id="final-design">
+        <div class="center-container small-container">
+          <div class="section-label">Final Design</div>
+          <h2>A fun and engaging music learning journey through gamification.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>From the moment you open the app, learning feels like an adventure. The home screen drops you into your island, where you can jump into a lesson, track your progress, and pick up right where you left off.</p>
+            <p>Each lesson walks you through the material, checks your understanding, and sends you off with a clear sense of what you've learned and earned, making every session feel rewarding from start to finish.</p>
+          </div>
+        </div>
+
+        <div class="center-container small-container top-xl">
+          <div class="section-label">Final Design</div>
+          <h2>Hear learnings come to life and climb up the leaderboard.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final-2.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>As you progress through Noteful, you collect band members and unlock the songs they can play. Swap out members, mix and match your lineup, and build a band that feels uniquely yours.</p>
+
+            <p>And when you're ready to show it off, the leaderboard is right there, turning your progress into friendly competition with the community.</p>
+          </div>
+        </div>
+
+        <div class="center-container small-container top-xl">
+          <div class="section-label">Final Design</div>
+          <h2>Different kinds of statistics to keep track of progress.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final-3.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>The profile page brings everything together. See your experience level, track your streak, browse your inventory, and check in on your class if you're part of one.</p>
+
+            <p>It's a personal snapshot of how far you've come, and (quietly) it's probably closer to what our client originally had in mind when they asked for a dashboard.</p>
+          </div>
+        </div>
+
+        <div class="small-container center-container top-m">
+          <div class="reach-out">
+            <p>Above marks six design highlights completed for this project. Feel free to reach out at <a href="mailto:liwndy@gmail.com"><span style="border-bottom:2px dotted #a19f96;">liwndy@gmail.com</span></a> if you’d like to know more about my work at the NSP!</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- REFLECTION -->
+      <section class="cs-section" id="reflection">
+        <div class="small-container">
+          <div class="section-label">Reflection</div>
+          <h2>How can we measure success?</h2>
+
+          <div class="prose top-s">
+            <p>While our scope didn't extend to handoff, we documented our process thoroughly — delivering a prototype, implementation demo, final presentation, and report. I also took it a step further by thinking ahead to post-launch, identifying metrics we could track to measure success over time:</p>
+          </div>
+
+          <div class="three-grid top-m">
+            <div class="grid-panel-2">
+              <h4>Adoption and reach</h4>
+              <p>Number of new users captured in X weeks within launch.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Consistent learning</h4>
+              <p>More than X% amount of students achieve a month long streak.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Classmate usage rate</h4>
+              <p>Adoption from music teachers to use in their lessons.</p>
+            </div>
+          </div>
+
+          <div class="prose top-m">
+            <p>And after presenting our final designs, we were glad to receive positive feedback from both the Noteful team and our peers :)</p>
+          </div>
+
+          <img src="noteful/feedback.png" class="top-s">
+        </div>
+
+        <div class="small-container center-container top-xl">
+          <div class="section-label">Takeaways</div>
+          <h2>Design is a balancing act.</h2>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel-3">
+            <h4>Dig for the problem!</h4>
+            <p class="top-xs">Our original scope was a dashboard redesign — but had we taken that at face value, we would've built the wrong thing.</p>
+            <p class="top-xs">Asking "is this actually the root problem?" early on is what led us to a solution that could genuinely serve Noteful's users long-term. It's a question I want to make a habit.</p>
+          </div>
+
+          <div class="grid-panel-3">
+            <h4>Design should be intentional.</h4>
+            <p class="top-xs">Best solutions come from being intentional, taking the time to think about which features truly matter and which don’t so we don't overcomplicate the experience.</p>
+            <p class="top-xs">I’ve come to see design as a balancing act: it only works when impact, clarity, and constraints all align.</p>
+          </div>
+        </div>
+
+        <div class="small-container thank-you top-xl">
+          <div>And a thank you to my teammates Angie Li, Lucy Li, Sophie McGrady, and Vivian Yuan, as well as Becky Billock. Working on this project was definitely a highlight of my senior year, and I'm incredibly honored to have been a part of this team!</div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Psst don't leave yet :)</div>
+          <h3>And... what would I do differently?</h3>
+          <div class="prose top-s">
+            <p>Honestly? Build a design system from the start. At the time, I didn't fully understand what a design system was, and looking back at the designs now, the inconsistencies are hard to miss. It's a humbling reminder of how much I've grown since.</p>
+            
+            <p>After working across multiple projects and building out design systems from the ground up, I now know that consistency is what makes a product feel cohesive, scalable, and trustworthy. Future me would've started there.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+ 
+    <!-- ════════ RIGHT NOTES COL ════════ -->
+    <aside class="notes-col" id="notesCol" aria-label="Margin notes"></aside>
+ 
+  </div>
+  <div class="footer">
+    <div class="footer-container">
+      <div>
+        <div class="footer-text">Thank you for visiting <3</div>
+        <div class="section-label">design + code by wendy</div>
+
+        <div class="email">
+          <div class="email-address">liwndy@gmail.com</div>
+          <a class="email-btn" href="mailto:liwndy@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="section-label">Socials</div>
+        <a href="mailto:liwndy@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/wantongl/" target=“_blank”>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  
+<script>
+  const NOTES = [
+    {
+    id:    'note-1',
+    text:  'However, through various research and ideation methods, we uncovered a much bigger opportunity... 👀'
+    },
+  ];
+</script>
+
+<script src="app.js"></script>
+<script src="sidenote.js"></script>
+
+<script>
+  buildNotes(NOTES);
+</script>
+</body>
+</html>

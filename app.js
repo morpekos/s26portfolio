@@ -49,3 +49,7 @@ window.addEventListener('resize', () => {
 });
 // Also reposition on scroll (anchors can shift if content lazy-loads)
 window.addEventListener('scroll', positionNotes, { passive: true });
+
+/* ══════════════════════════════════════════════
+    IMAGE SLIDESHOW
+══════════════════════════════════════════════ */

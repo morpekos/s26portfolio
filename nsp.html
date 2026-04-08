@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Norman Sicily Project</title>
+  <link rel="icon" type="image/x-icon" href="snorlax.png">
+
+  <title>Wendy Li / Norman Sicily Project</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,18 +17,14 @@
   <div class="progress-bar" id="progressBar"></div>
  
   <nav class="topnav">
-    <a href="index.html" class="nav-link">Wendy Li</a>
+    <a href="index.html" class="nav-left">
+      <img src="snorlax.png" class="logo">
+      <div class="nav-link">Wendy Li</div>
+    </a>
     <div class="nav-right">
       <a href="index.html" class="nav-link">Works</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="mailto:liwndy@gmail.com" class="nav-email" title="Email me">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.8"
-            stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="M2 7l10 7 10-7"/>
-        </svg>
-      </a>
+      <a href="mailto:liwndy@gmail.com" class="nav-btn">Reach Out</a>
     </div>
   </nav>
 
@@ -40,7 +38,7 @@
       </div>
     </div>
 
-    <img src="nsp/full.png">
+    <img src="nsp/full.png" class="top-m">
   </section>
  
   <div class="page-wrap">
@@ -49,10 +47,10 @@
     <aside class="sidebar-left">
       <ul class="toc-list" id="tocList">
         <li><a href="#overview" class="active">At A Glance</a></li>
-        <li><a href="#kickoff">Kickoff</a></li>
-        <li><a href="#prototype">Prototype</a></li>
+        <li><a href="#kickoff">Project Kickoff</a></li>
+        <li><a href="#prototype">Building the Prototype</a></li>
         <li><a href="#final-design">Final Design</a></li>
-        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#reflection">Personal Reflection</a></li>
       </ul>
     </aside>
  
@@ -69,7 +67,7 @@
 
       <div class="three-grid top-m">
         <div>
-          <p class="meta-label">Project Type</p>
+          <p class="meta-label">Project</p>
           <div>Client Project</div>
         </div>
 
@@ -83,28 +81,38 @@
           <div>January – April 2025</div>
         </div>
       </div>
- 
+
       <div class="divider"></div>
 
       <div class="small-container">
         <p class="section-label">Problem</p>
-        <h2>The NSP is a rich historical archive that's difficult to explore and digest meaningfully for readers.</h2>
-        <div class="prose">
+        <h2>The NSP had a depth problem.</h2>
+        <div class="prose top-s">
           <p data-note-id="note-problem">
-            The NSP housed an extensive collection information documenting 12th-century Norman Sicily. While academically rigorous, the experience was dense and offered limited guidance. Visually, the site felt flat and utilitarian that failed to reflect the color, vibrancy, and cultural richness of Norman Sicily.
+            The Norman Sicily Project is a rich historical archive, home to an extensive collection of documents, artifacts, and scholarship on 12th-century Norman Sicily. The knowledge was all there, but for most readers, it was nearly impossible to explore meaningfully.
           </p>
+
+          <p>
+            The experience was dense, offered little guidance, and visually, the site felt flat and utilitarian — a far cry from the color, vibrancy, and cultural richness of the world it was trying to bring to life.
+          </p>
+
           <div class="inline-note">
             <p>This disconnect between content and presentation made the history feel distant instead of engaging.</p>
           </div>
         </div>
       </div>
 
-      <div class="img-wrapper">
+      <div class="img-wrapper top-m">
         <img src="nsp/old.png" />
         <span class="img-caption">Old Website</span>
       </div>
 
-      <h3 class="top-xl">Over 4 months, we built upon and reframed the website's structure, navigation, and readability.</h3>
+      <div class="small-container">
+        <h3 class="top-xl">So we set out to change that.</h3>
+        <div class="prose">
+          <p>Over four months, our team reimagined the site from the ground up, rethinking its structure, navigation, and visual identity across three key areas:</p>
+        </div>
+      </div>
 
       <div class="three-grid top-m">
         <div class="grid-panel">
@@ -132,17 +140,17 @@
         </div>
       </div>
 
-      <div class="center-container">
+      <div class="center-container small-container">
         <p class="section-label top-xl">Solution</p>
-        <h2>A new clear and visually engaging platform that celebrates Norman Sicily’s rich culture.</h2>
+        <h2>A clear and visually engaging platform that celebrates Norman Sicily’s rich culture.</h2>
+      </div>
 
-        <img src="nsp/solution-1.png" class="top-s">
+      <img src="nsp/solution-1.png" class="top-m">
 
         <div class="two-grid top-s">
           <img src="nsp/solution-2.png">
           <img src="nsp/solution-3.png">
         </div>
-      </div>
       </section>
 
       <div class="divider"></div>
@@ -152,11 +160,13 @@
         <div class="two-grid">
           <div>
             <p class="section-label">Kickoff</p>
-            <h2>Creating an experience accessible to scholars, teachers, and learners alike.</h2>
-            <div class="prose">
+            <h2>An experience accessible to scholars, teachers, and learners alike.</h2>
+            <div class="prose top-s">
               <p>
-                After speaking with the project leads, we learned that the site needed to support a wide range of users, each approaching the content with different goals and levels of expertise. Some would come seeking in-depth materials, while others needed an approachable entry point into Norman Sicily’s history. Together, we defined 3 primary audiences.
+                After our first conversations with the project leads, one thing became clear: this wasn't a site built for a single type of user. The NSP needed to work for scholars diving deep into primary sources, teachers building curricula, and curious learners encountering Norman Sicily for the very first time. Each audience comes in with different goals and levels of expertise.
               </p>
+
+              <p>Together with the team, we defined 3 primary audiences to anchor every decision that followed.</p>
             </div>
           </div>
 
@@ -170,10 +180,10 @@
 
         <div class="small-container">
           <p class="section-label top-xl">Information Architecture</p>
-          <h3>Assessing existing design decisions to better align structure with user needs and website goals.</h3>
+          <h3>Assessing existing design decisions.</h3>
 
           <div class="prose">
-            <p>We also reviewed the work completed by designers before us, including their information architecture and low-fidelity wireframes. This analysis not only helped us understand the project’s direction so far but also identified opportunities to better align the experience with NSP’s goals.</p>
+            <p>We started by reviewing the work of designers before us. More specifically, we looked at their information architecture, their low-fidelity wireframes, and the decisions that had shaped the site up to this point. This helped us understand where the project was headed, and more importantly, where there were opportunities to better align the structure with what the NSP actually needed to be.</p>
           </div>
         </div>
 
@@ -183,24 +193,40 @@
         </div>
 
         <div class="small-container">
+          <h3 class="top-m">What we found.</h3>
+          <div class="three-grid top-s">
+            <div class="grid-panel-2">
+              <h4>Unclear labels</h4>
+              <p>Navigation labels were vague and inconsistent, leaving users unsure of where to find information.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Disconnected structure</h4>
+              <p>The site's organization reflected how content was added over time — not how users actually think.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Irrelevant pages</h4>
+              <p>Pages were added without a clear sense of who they were for or how they fit into the experience.</p>
+            </div>
+          </div>
           <div class="prose top-m">
-            <p>The site's navigation lacked consistency — page groupings and labels made it hard to understand how sections related or where to begin. Several pages felt misaligned with the project's core purpose, adding unnecessary complexity. Overall, the structure didn't account for the site's diverse use cases, whether that's quick exploration, teaching, or in-depth research.</p>
+            <p>Underneath it all, the structure didn't account for the site's range of use cases: quick exploration, classroom teaching, in-depth research.</p>
           </div>
         </div>
 
-        <div class="center-container">
-          <h2 class="top-xl">Our new IA laid the groundwork for a clearer, more intuitive system that supports discovery across user groups.</h2>
+        <div class="center-container small-container">
+          <div class="section-label top-xl">Revamped IA</div>
+          <h2>Our new IA laid the groundwork for a clearer, more intuitive system that supports discovery across user groups.</h2>
+
+          <div class="prose top-s">
+            <p>The result is an architecture that reflects how people actually move through it, whether they're browsing casually or researching in depth.</p>
+          </div>
         </div>
 
         <div class="img-wrapper top-m">
           <img src="nsp/new-ia.png">
-          <div class="img-caption">New IA</div>
-        </div>
-
-        <div class="small-container">
-          <div class="prose top-m">
-            <p>Through this process, we identified the most important ways users engage with the site and elevated these as top-level navigation categories. Furthermore, edundant or low-value pages were merged or removed to create a more focused structure. The revised IA now supports multiple modes of use by grouping content in ways that mirror real user goals.</p>
-          </div>
+          <div class="img-caption-light">New IA</div>
         </div>
       </section>
 
@@ -210,10 +236,10 @@
       <section class="cs-section" id="prototype">
         <div class="small-container">
           <p class="section-label">Prototype</p>
-          <h3>With a clearer IA in place, we moved into low-fidelity wireframes to map the site's structure.</h3>
+          <h2>With a clearer structure in place, we moved into early wireframes.</h2>
 
-          <div class="prose">
-            <p>These early explorations allowed us to quickly test layouts and explore how different types of content could live together. The goal was clarity and function, ensuring the foundation supported diverse needs.</p>
+          <div class="prose top-s">
+            <p>Low-fidelity explorations gave us a way to quickly test layouts and think through how different types of content could coexist on the same page. At this stage, the focus was on clarity and function — making sure the foundation we'd built in the IA phase could actually hold up across the site's diverse needs before we moved into visual design.</p>
           </div>
         </div>
 
@@ -227,7 +253,7 @@
           <h3>A visual identity rooted in culture, built for credibility.</h3>
 
           <div class="prose">
-            <p>After communicating with the client, we aligned on a visual identity that felt vibrant, reflecting Norman Sicily's rich culture, while remaining trustworthy and appropriate for an institutional context.</p>
+            <p>Through conversations with the client, we landed on a direction that balanced two things that can sometimes feel at odds: vibrancy and trustworthiness. The design needed to reflect the richness of Norman Sicily's culture while still feeling appropriate for an institutional, academically-oriented context.</p>
           </div>
         </div>
 
@@ -251,10 +277,10 @@
 
         <div class="small-container top-xl">
           <div class="section-label">Usability Testing</div>
-          <h3>To validate our design, we conducted task-based usability testing with our target audience.</h3>
+          <h3>To validate our decisions, we brought in our target audience.</h3>
 
           <div class="prose" data-note-id="note-testing">
-            <p>We tested with 6 participants — 2 from each of our target audiences with tasks focused on navigation clarity, content findability, visual design, and overall usability. The most consistent feedback pointed to UX writing, with users flagging areas where navigation wording and labeling could be clearer and more intuitive.</p>
+            <p>We ran task-based usability testing with six participants — two from each of our three target audiences — with tasks designed to surface issues around navigation clarity, content findability, visual design, and overall usability. The most consistent theme that emerged was UX writing: users repeatedly flagged areas where navigation labels and wording felt unclear or harder to parse than it needed to be.</p>
           </div>
 
           <div class="inline-note">
@@ -274,7 +300,7 @@
           <h2>A redesigned experience that makes Norman Sicily's culture explorable for all.</h2>
         </div>
 
-        <div class="two-grid top-s">
+        <div class="two-grid top-m">
           <div class="grid-panel">
             <img src="nsp/final-1.png">
             <div class="grid-panel-details">
@@ -335,20 +361,27 @@
 
       <!-- REFLECTION -->
       <section class="cs-section" id="reflection">
-        <div class="small-container">
+        <div class="small-container center-container">
           <div class="section-label">Reflection</div>
-          <h2>Content design and visual design go hand in hand.</h2>
+          <h2>The best designs work from the inside out.</h2>
+        </div>
 
-          <div class="prose">
-            <p>Through this project, I learned that the way information is structured and written is just as important as the way it’s visually presented. Even with a clean layout and engaging visuals, unclear labels, academic jargon, or dense text made the site harder to navigate.</p>
-
-            <p>By refining both the content hierarchy and the visual identity together, we were able to create a platform that feels approachable, informative, and true to Norman Sicily’s rich culture.</p>
+        <div class="two-grid top-m">
+          <div class="grid-panel-3">
+            <h4>Content & visual go hand in hand.</h4>
+            <p class="top-xs">The way information is structured and written is as important how it’s presented. A clean layout can only take you so far if labels are confusing and text is dense.</p>
+            <p class="top-xs">Working on both in tandem is what made the final experience feel cohesive and genuinely approachable.</p>
           </div>
 
-          <div class="thank-you top-s">
-            <div>And a thank you to...</div>
-            <p>Sophia Liu, Dawn Hayes, Joe Hayes, and Craig McDonald. It's been a while since I've worked on web design, and I truly appreciate the opportunity to work on something so rich and meaningful!</p>
+          <div class="grid-panel-3">
+            <h4>Design is a system, not a surface.</h4>
+            <p class="top-xs">I approached it as a systems problem — who are the users, how do they think, what do they need, and how does the visual language support all of that?</p>
+            <p class="top-xs">That end-to-end thinking is what I want to bring to every project I work on.</p>
           </div>
+        </div>
+
+        <div class="small-container thank-you top-xl">
+          <div>And a thank you to Sophia Liu, Dawn Hayes, Joe Hayes, and Craig McDonald. It's been a while since I've worked on web design, and I truly appreciate the opportunity to work on something so rich and meaningful!</div>
         </div>
       </section>
     </main>
@@ -358,13 +391,25 @@
  
   </div>
   <div class="footer">
-    <div class="left-footer">
-      <a href="mailto:liwndy@gmail.com" class="nav-link">Email</a>
-      <a href="https://www.linkedin.com/in/wantongl/" class="nav-link">LinkedIn</a>
-      <a href="https://docs.google.com/document/d/1pJCMrsLGELuIBm1lkuZ4Rl2dKCiufdXss0PyfWRx3mM/edit?usp=sharing" class="nav-link">Resume</a>
-    </div>
+    <div class="footer-container">
+      <div>
+        <div class="footer-text">Thank you for visiting <3</div>
+        <div class="section-label">design + code by wendy</div>
 
-    <div>© Wendy Li</div>
+        <div class="email">
+          <div class="email-address">liwndy@gmail.com</div>
+          <a class="email-btn" href="mailto:liwndy@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="section-label">Socials</div>
+        <a href="mailto:liwndy@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/wantongl/" target=“_blank”>LinkedIn</a>
+
+        <div class="footer-update top-s">Last updated Apr 2026</div>
+      </div>
+    </div>
   </div>
 <script>
   const NOTES = [

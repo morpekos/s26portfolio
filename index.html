@@ -3,50 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BeFriend</title>
+  <link rel="icon" type="image/x-icon" href="snorlax.png">
+
+  <title>Wendy Li</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="yellow">
   <nav class="topnav">
-    <a href="index.html" class="nav-link">Wendy Li</a>
+    <a href="index.html" class="nav-left">
+      <img src="snorlax.png" class="logo">
+      <div class="nav-link">Wendy Li</div>
+    </a>
     <div class="nav-right">
       <a href="index.html" class="nav-link">Works</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="mailto:liwndy@gmail.com" class="nav-email" title="Email me">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.8"
-            stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="M2 7l10 7 10-7"/>
-        </svg>
-      </a>
+      <a href="mailto:liwndy@gmail.com" class="nav-btn">Reach Out</a>
     </div>
   </nav>
 
   <div class="home-page">
-    <h1>Wendy Li is a product designer driven by curiosity, exploring what's possible in the world of design and everything beyond 🪐</h1>
+    <div class="home-hero">
+      <div class="construction">portfolio under construction</div>
+      <h1><img src="nom.gif" class="inline-img"> Wendy Li is a product designer driven by <i>curiosity</i>. I explore the <span style="color:#8e8c84;"><i>why</i></span> behind design to make decisions that are purposeful.</h1>
+      <h2>Most recently @ Lyft. <a href="#"><span style="border-bottom:2px dotted #a19f96;">Talk to me</span></a> about anything design, Pokemon, or my go-to Molly Tea order :)</h2>
+    </div>
 
-    <div class="two-grid top-xl">
+    <div class="home-grid top-l">
       <div>
         <div class="hero-meta">
-          <img src="duolingo/logo.png" class="project-logo">
+          <img src="lyft/logo.png" class="project-logo">
           <div>
-            <div><span style="font-weight:500;">Duolingo</span> (*Not Affilidated)</div>
-            <div><span style="color:#888;">Spring 2026</span></div>
+            <div><span style="font-weight:500;">Lyft Concierge</span></div>
+            <div><span style="color:#888;">Product Design</span></div>
           </div>
         </div>
 
-        <a href="duotrip.html">
-          <img src="duolingo/full.png" alt="DuoTrip project image">
+        <a href="lyft.html">
+          <img src="lyft/cover.gif" alt="Lyft project image" class="top-s">
         </a>
 
-        <h2>DuoTrip, turning travel plans into real-world language confidence.</h2>
-        <div class="tag">Mobile Design / Product Design</div>
+        <h3 class="top-s">Lyft Concierge Ride Setup</h3>
+        <h4>Improving the ride setup experience for Lyft's B2B product.</h4>
+      </div>
+
+      <div>
+        <div class="hero-meta">
+          <img src="noteful/logo.png" class="project-logo">
+          <div>
+            <div><span style="font-weight:500;">Noteful</span></div>
+            <div><span style="color:#888;">UX/UI Redesign</span></div>
+          </div>
+        </div>
+
+        <a href="noteful.html">
+          <video class="project-video top-s" autoplay loop muted playsinline>
+            <source src="noteful/cover.mov" type="video/mp4">
+            Your browser does not support the video tag. 
+          </video>
+
+          <!-- <img src="noteful/full.png" alt="Noteful image" class="top-s"> -->
+        </a>
+
+        <h3 class="top-s">Noteful E-Learning Experience</h3>
+        <h4>Learning a new skill is hard for young audiences. Let's make it fun!</h4>
       </div>
 
       <div>
@@ -59,64 +83,75 @@
         </div>
 
         <a href="nsp.html">
-          <img src="nsp/full.png" alt="Norman Siciliy Project image">
+          <!-- <video class="project-video top-s" autoplay loop muted playsinline>
+            <source src="nsp/cover.mov" type="video/mp4">
+            Your browser does not support the video tag. 
+          </video> -->
+
+          <img src="nsp/cover.png" class="top-s">
         </a>
 
-        <h2>Norman Siciliy Project, transforming a website to bring 12th-century Norman Sicily's history to life.</h2>
-        <div class="tag">Web Design / Information Architecture</div>
-      </div>
-
-      <div>
-        <div class="hero-meta">
-          <img src="tgtg/logo.png" class="project-logo">
-          <div>
-            <div><span style="font-weight:500;">Too Good to Go</span> (*Not Affilidated)</div>
-            <div><span style="color:#888;">Design System</span></div>
-          </div>
-        </div>
-
-        <a href="tgtg.html">
-          <img src="tgtg/full.png" alt="Too Good to Go project image">
-        </a>
-
-        <h2>Bagel, creating a unifed and scalable design recipe for Too Good to Go.</h2>
-        <div class="tag">Design System / Documentation</div>
-      </div>
-
-      <div>
-        <div class="hero-meta">
-          <img src="befriend/logo.png" class="project-logo">
-          <div>
-            <div><span style="font-weight:500;">BeFriend</span></div>
-            <div><span style="color:#888;">Design with AI</span></div>
-          </div>
-        </div>
-
-        <a href="befriend.html">
-          <img src="befriend/full.png" alt="BeFriend project image">
-        </a>
-
-        <h2>BeFriend, helping you understand the relationships that matter.</h2>
-        <div class="tag">Design with ai / Product Design</div>
+        <h3 class="top-s">Norman Siciliy Project</h3>
+        <h4>Transforming a website to bring 12th-century Norman Sicily's history to life.</h4>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <div class="left-footer">
-      <a href="mailto:liwndy@gmail.com" class="nav-link">Email</a>
-      <a href="https://www.linkedin.com/in/wantongl/" class="nav-link">LinkedIn</a>
-      <a href="https://docs.google.com/document/d/1pJCMrsLGELuIBm1lkuZ4Rl2dKCiufdXss0PyfWRx3mM/edit?usp=sharing" class="nav-link">Resume</a>
-    </div>
+    <div class="footer-container">
+      <div>
+        <div class="footer-text">Thank you for visiting <3</div>
+        <div class="section-label">design + code by wendy</div>
 
-    <div>© Wendy Li</div>
+        <div class="email">
+          <div class="email-address">liwndy@gmail.com</div>
+          <a class="email-btn" href="mailto:liwndy@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="section-label">Socials</div>
+        <a href="mailto:liwndy@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/wantongl/" target=“_blank”>LinkedIn</a>
+      </div>
+    </div>
   </div>
+
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script>
+    var msnry;
+  
+    function initMasonry() {
+      if (window.innerWidth <= 700) {
+        if (msnry) msnry.destroy();
+        msnry = null;
+        return;
+      }
+  
+      imagesLoaded('.home-grid', function() {
+        if (msnry) msnry.destroy();
+        msnry = new Masonry('.home-grid', {
+          itemSelector: '.home-grid > div',
+          percentPosition: true,
+          gutter: 24
+        });
+      });
+  
+      // re-layout when each video is ready
+      document.querySelectorAll('.project-video').forEach(function(video) {
+        video.addEventListener('loadedmetadata', function() {
+          if (msnry) msnry.layout();
+        });
+      });
+    }
+  
+    initMasonry();
+    window.addEventListener('resize', initMasonry);
+  </script>
 
 <script src="app.js"></script>
 <script src="sidenote.js"></script>
 
-<script>
-  buildNotes(NOTES);
-</script>
 </body>
 </html>

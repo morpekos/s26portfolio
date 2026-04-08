@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wendy Li / Noteful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="yellow">
+  <div class="progress-bar" id="progressBar"></div>
+ 
+  <nav class="topnav">
+    <a href="index.html" class="nav-left">
+      <img src="snorlax.png" class="logo">
+      <div class="nav-link">Wendy Li</div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="mailto:liwndy@gmail.com" class="nav-btn">Reach Out</a>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <h1 class="hero-title">Creating a fun, gamified e-learning experience for young audiences.</h1>
+    <div class="hero-meta">
+      <img src="noteful/logo.png" class="project-logo">
+      <div>
+        <div><span style="font-weight:500;">Noteful</span></div>
+        <div><span style="color:#888;">UX/UI Redesign</span></div>
+      </div>
+    </div>
+
+    <img src="noteful/full.png" class="top-m">
+  </section>
+ 
+  <div class="page-wrap">
+ 
+    <!-- ════════ LEFT SIDEBAR ════════ -->
+    <aside class="sidebar-left">
+      <ul class="toc-list" id="tocList">
+        <li><a href="#overview" class="active">At A Glance</a></li>
+        <li><a href="#research">Preliminary Research</a></li>
+        <li><a href="#conceptualize">Conceptualization</a></li>
+        <li><a href="#prototype">Building the Prototype</a></li>
+        <li><a href="#final-design">Final Design</a></li>
+        <li><a href="#reflection">Personal Reflection</a></li>
+      </ul>
+    </aside>
+ 
+    <!-- ════════ MAIN CONTENT ════════ -->
+    <main class="main-content">
+ 
+      <!-- OVERVIEW -->
+      <section class="cs-section" id="overview">  
+      <div class="start-text">
+        <p>
+            Despite being a foundation for music, music theory is often viewed as boring or abstract, especially for younger audiences. That’s where Noteful comes in: a startup aiming to make music theory fun. In this project, my team and I tackle the redesign of Noteful's experience and interface for an engaging, long-term learning journey through gamification.
+        </p>
+      </div>
+
+      <div class="three-grid top-m">
+        <div>
+          <p class="meta-label">Project</p>
+          <div>Client Project</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Team</p>
+          <div>5 HCI Students, Noteful CEO & Eng Lead</div>
+        </div>
+
+        <div>
+          <p class="meta-label">Timeline</p>
+          <div>January – May 2023</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="small-container">
+        <p class="section-label">Original Prompt</p>
+        <h2>Design an engaging dashboard to keep students motivated long-term.</h2>
+        <div class="prose top-s">
+          <p data-note-id="note-1">
+            For my senior HCI capstone project, my team partnered with Noteful. When we first got onboarded, they requested a revamp of their beta student dashboard ahead of their official launch — mostly UI improvements that would appeal to their audience of young kids.
+          </p>
+        </div>
+      </div>
+
+      <div class="img-wrapper">
+        <img src="noteful/old.png" class="top-m">
+        <div class="img-caption">Original App</div>
+      </div>
+
+      <div class="small-container">
+        <h3 class="top-xl">Over four months, we redesigned Noteful's UX/UI, focusing on both strategy and execution across the product lifecycle:</h3>
+
+        <div class="three-grid top-m">
+          <div class="grid-panel-2">
+            <img src="noteful/leader-icon.png">
+            <h4>Defined product strategy</h4>
+            <p>Identified user needs, learning goals, and engagement opportunities through research.</p>
+          </div>
+
+          <div class="grid-panel-2">
+            <img src="noteful/map-icon.png">
+            <h4>Explored & validated ideas</h4>
+            <p>Rapidly iterated on low- to high-fidelity prototypes to test flows and gamification interactions.</p>
+          </div>
+
+          <div class="grid-panel-2">
+            <img src="noteful/band-icon.png">
+            <h4>Designed for long-term</h4>
+            <p>Developed systems for progression, motivation, and feedback that support sustained learning over time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-container small-container">
+        <p class="section-label top-xl">Solution</p>
+        <h2>A gamified, learner-centered experience that makes music theory engaging, approachable, and sustainable for young learners.</h2>
+      </div>
+
+      <img src="noteful/solution-1.png" class="top-m">
+
+      <div class="three-grid top-s">
+        <img src="noteful/solution-4.png">
+        <img src="noteful/solution-5.png">
+        <img src="noteful/solution-6.png">
+      </div>
+
+      <div class="two-grid top-s">
+        <img src="noteful/solution-2.png">
+        <img src="noteful/solution-3.png">
+      </div>
+      </section>
+
+      <div class="divider"></div>
+ 
+      <!-- KICKOFF -->
+      <section class="cs-section" id="research">
+        <div class="small-container">
+          <p class="section-label">Research</p>
+          <h2>So... why was the app needed in the first place?</h2>
+          <div class="prose top-s">
+            <p data-note-id="note-2">
+              Since this is also completed as a capstone project, time had to be dedicated to research. Before starting the redesign, I brainstormed and executed with my team 3 different forms of research to gather more insights and familiarize ourselves with the music theory e-learning scene, including:
+            </p>
+          </div>
+        </div> 
+
+        <div class="three-grid top-m">
+          <div class="grid-panel">
+            <div class="grid-panel-details">
+              <img src="noteful/literature.png">
+              <h4 class="top-xs">Literature review</h4>
+              <p>of what is relevant to extrinsic/intrinsic motivation and e-learning.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <div class="grid-panel-details">
+              <img src="noteful/analysis.png">
+              <h4 class="top-xs">Competitive Analysis</h4>
+              <p>of popular e-learning apps, some specific to music, currently on the market.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <div class="grid-panel-details">
+              <img src="noteful/interviews.png">
+              <h4 class="top-xs">User interviews</h4>
+              <p>with long-term music theory learners to hear firsthand experiences.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container">
+          <p class="section-label top-xl">Research Insight</p>
+          <h3>For young learners, traditional music theory learning comes off as monotonous and unengaging.</h3>
+
+          <div class="prose">
+            <p>Music theory is often taught alongside instruments like the piano, but unlike playing music, theory can feel monotonous and disconnected. Traditional worksheets and apps aren’t designed with kids in mind, leaving young learners wanting something more fun, and shared with friends.</p>
+          </div>
+        </div>
+
+        <div class="img-wrapper">
+          <img src="noteful/persona.png" class="top-m">
+          <div class="img-caption">User Persona</div>
+        </div>
+
+        <div class="small-container top-m">
+          <div class="prose">
+            <p>These insights got us thinking: How can Noteful's dashboard fill in the gaps where current learning methods are falling short?</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CONCEPTUALIZE -->
+      <section class="cs-section" id="conceptualize">
+        <div class="small-container">
+          <p class="section-label">Conceptualize</p>
+          <h2>How can Noteful come fill in gaps in the music theory learning space?</h2>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <div class="grid-panel-details">
+              <img src="noteful/braindump.png">
+              <h4 class="top-xs">Brainstorming jam</h4>
+              <p>Our team first brainstormed together on how Noteful could improve student engagement through a dashboard, grounding our ideas on the concepts of intrinsic and extrinsic motivation through gamification.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <div class="grid-panel-details">
+              <img src="noteful/storyboard.png">
+              <h4 class="top-xs">Speed-dating with storyboards</h4>
+              <p>We then tested the ideas through storyboards. For example, this storyboard was one that was particularly well-received, informing us to create some sort of competition within the Noteful community.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container">
+          <p class="section-label top-xl">Initial Sketches</p>
+          <h3>Testing a feature's presentation and its perceived effectiveness.</h3>
+
+          <div class="prose">
+            <p data-note-id="note-3">I next suggested we sketched feature ideas, highlighting how presentation affects effectiveness. Afterwards, we ran quick think-aloud interviews for feedback on layout, navigation, and visuals.</p>
+          </div>
+        </div>
+
+        <div class="img-wrapper">
+          <img src="noteful/sketch.png" class="top-m">
+          <div class="img-caption">Think Aloud Feedback</div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">New Considerations</div>
+          <h3>Would a dashboard redesign be sufficient for an effective learning experience?</h3>
+
+          <div class="prose">
+            <p>With more user feedback, I kept coming back to the same nagging question: is a dashboard redesign actually enough? We'd taken the brief at face value coming in, but something wasn't sitting right. A dashboard alone felt like too narrow a lens for what was ultimately a much deeper engagement problem...</p>
+          </div>
+
+          <div class="three-grid top-m">
+            <div class="grid-panel-2">
+              <h4>It would get cluttered fast.</h4>
+              <p>As evident from feedback, a single dashboard couldn't hold everything Noteful needed to offer.</p>
+            </div>
+
+            <div class="grid-panel-2">
+              <h4>A missed opportunity.</h4>
+              <p>A fuller experience could set Noteful apart from competitors who weren't designing for younger audiences.</p>
+            </div>
+
+            <div class="grid-panel-2">
+              <h4>The bigger picture mattered.</h4>
+              <p>Real, long-term engagement needs a complete and end-to-end learning experience.</p>
+            </div>
+          </div>
+
+          <div class="prose top-m">
+            <p>After walking Noteful through our rationale, we got everyone aligned and shifted our focus — updating our problem statement to reflect what we now understood the real challenge to be.</p>
+          </div>
+        </div>
+
+        <img src="noteful/hmw.png" class="top-m">
+      </section>
+      
+      <div class="divider"></div>
+
+      <section class="cs-section" id="prototype">
+        <div class="small-container">
+          <div class="section-label">Prototype</div>
+          <h2>Designing a home for Noteful's learning experience.</h2>
+          <div class="prose top-s">
+            <p>With our scope redefined, the home screen was the natural place to start — it's the first thing a learner sees when they open the app, and it sets the tone for everything that follows. From there, I started exploring directions that could bring personality and playfulness to the experience while keeping things clear and easy to navigate.</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m" data-note-id="note-4">
+          <div class="grid-panel">
+            <img src="noteful/path.png">
+            <div class="grid-panel-details">
+              <h4>Path view</h4>
+              <p class="top-xxs">The path view was a familiar view that was commonly found within level-based games, which felt the most straightforward.</p>
+
+              <p class="top-xxs">However, this approach couldn’t capture all the layers of the curriculum, leaving behind the 'tiers'.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="noteful/island.png">
+            <div class="grid-panel-details">
+              <h4>Island view</h4>
+              <p class="top-xxs">The island view provided a more fun approach that was unique, and it accurately represented the 4 layers of Noteful's curriculum.</p>
+
+              <p class="top-xxs">I was initially worried about its unfamiliar concept to first-time users, but this was not found to be an issue during testing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Home Redesign</div>
+          <h3>A fun, dynamic home page that serves as a central hub for learning features.</h3>
+
+          <div class="prose top-s">
+            <p>Choosing the island view came down to two things I wasn't willing to compromise on: it had to be fun, and it had to reflect the full complexity of Noteful's curriculum. That second part was harder than it sounds — the tiered structure meant a linear path just wouldn't cut it, no matter how polished it looked.</p>
+            <p>The island view was the only direction that could hold all of that without feeling cluttered or confusing. The fact that it also happened to feel the most distinctly Noteful made it an easy final call.</p>
+          </div>
+        </div>
+
+        <div class="four-grid top-m">
+          <div class="grid-panel">
+            <img src="noteful/archi-1.png">
+
+            <div class="grid-panel-details">
+              <h4>Levels</h4>
+              <p>Expandable panel to toggle between levels</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="noteful/archi-2.png">
+
+            <div class="grid-panel-details">
+              <h4>Tiers</h4>
+              <p>One tier is represented by an entire island</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="noteful/archi-3.png">
+
+            <div class="grid-panel-details">
+              <h4>Topics</h4>
+              <p>Must start on all topics to unlock next tier</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="noteful/archi-4.png">
+
+            <div class="grid-panel-details">
+              <h4>Lessons</h4>
+              <p>Progress bar reflects lessons til topic completion</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Features</div>
+          <h2>How can we target both extrinsic and intrinsic motivation?</h2>
+
+          <div class="prose top-s">
+            <p>Working with my teammates, we designed a set of features to enhance motivation on both fronts without cluttering the experience. We leaned on the Hook Model as a framework for building sustainable user habits, making sure each feature had a clear role in keeping learners engaged over time, not just in the moment.</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div>
+            <h3>A leaderboard that makes learning social</h3>
+            <div class="prose">
+              <p>Friendly competition goes a long way. The leaderboard taps into extrinsic motivation by giving learners something to work toward together — and in doing so, builds a sense of community within the app.</p>
+            </div>
+          </div>
+
+          <img src="noteful/leaderboard.png">
+        </div>
+
+        <div class="two-grid top-m">
+          <img src="noteful/lesson-overview.png">
+
+          <div>
+            <h3>A lesson overview that gives meaning</h3>
+            <div class="prose">
+              <p>Before diving in, users can see exactly what they're about to study. Knowing the "why" behind a lesson helps learners build a deeper connection to the material, a small addition that goes a long way toward intrinsic motivation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div>
+            <h3>Streaks that reward showing up</h3>
+            <div class="prose">
+              <p>Streaks are a familiar pattern for good reason. By surfacing weekly progress, offering positive reinforcement, and tying in rewards, we made consistency feel achievable and worth maintaining without adding friction to the experience.</p>
+            </div>
+          </div>
+
+          <img src="noteful/streak.png">
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Decision</div>
+          <h2>How can we reduce redundancy to highlight high-impact features only?</h2>
+
+          <div class="prose top-s">
+            <p>"Badges" was a feature our client originally requested for milestone tracking, but as we dug deeper, it started to overlap with another concept that had emerged from testing: "Build a Band." Rather than keeping both, we took the time to evaluate them side by side.</p>
+          </div>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel">
+            <img src="noteful/profile.png">
+            <div class="grid-panel-details">
+              <h4>Collect badges</h4>
+              <p class="top-xxs">Badges were straightforward and easy to understand — progress felt directly tied to Noteful's curriculum.</p>
+
+              <p class="top-xxs">But the ceiling for engagement was limited, and we worried it would end up incentivizing surface-level completion over genuine learning.</p>
+            </div>
+          </div>
+
+          <div class="grid-panel">
+            <img src="noteful/band.png">
+            <div class="grid-panel-details">
+              <h4>Build a band</h4>
+              <p class="top-xxs">This leaned into the musical aspect, making milestones feel distinctly on-brand. Users could build something that felt personally theirs, creating real emotional investment over time.</p>
+
+              <p class="top-xxs">The tradeoff was complexity, requiring more engineering effort.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">And the decision is...</div>
+          <h3>A unique way to demonstrate achievements.</h3>
+          <div class="prose">
+            <p>In the end, Build a Band was the clearer choice. It aligned more closely with our design goals and Noteful's mission, and after looping in the development team to pressure-test the feasibility, we felt confident it would meaningfully elevate the experience, not just add to it.</p>
+
+            <p>Noteful agreed, and we landed on the decision to keep this feature in our prototype, with plans to introduce it as a post-MVP feature.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- FINAL -->
+      <section class="cs-section" id="final-design">
+        <div class="center-container small-container">
+          <div class="section-label">Final Design</div>
+          <h2>A fun and engaging music learning journey through gamification.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>From the moment you open the app, learning feels like an adventure. The home screen drops you into your island, where you can jump into a lesson, track your progress, and pick up right where you left off.</p>
+            <p>Each lesson walks you through the material, checks your understanding, and sends you off with a clear sense of what you've learned and earned, making every session feel rewarding from start to finish.</p>
+          </div>
+        </div>
+
+        <div class="center-container small-container top-xl">
+          <div class="section-label">Final Design</div>
+          <h2>Hear learnings come to life and climb up the leaderboard.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final-2.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>As you progress through Noteful, you collect band members and unlock the songs they can play. Swap out members, mix and match your lineup, and build a band that feels uniquely yours.</p>
+
+            <p>And when you're ready to show it off, the leaderboard is right there, turning your progress into friendly competition with the community.</p>
+          </div>
+        </div>
+
+        <div class="center-container small-container top-xl">
+          <div class="section-label">Final Design</div>
+          <h2>Different kinds of statistics to keep track of progress.</h2>
+        </div>
+
+        <video class="project-video top-s" autoplay loop muted playsinline>
+          <source src="noteful/final-3.mov" type="video/mp4">
+          Your browser does not support the video tag. 
+        </video>
+
+        <div class="center-container small-container top-s">
+          <div class="prose">
+            <p>The profile page brings everything together. See your experience level, track your streak, browse your inventory, and check in on your class if you're part of one.</p>
+
+            <p>It's a personal snapshot of how far you've come, and (quietly) it's probably closer to what our client originally had in mind when they asked for a dashboard.</p>
+          </div>
+        </div>
+
+        <div class="small-container center-container top-m">
+          <div class="reach-out">
+            <p>Above marks six design highlights completed for this project. Feel free to reach out at <a href="mailto:liwndy@gmail.com"><span style="border-bottom:2px dotted #a19f96;">liwndy@gmail.com</span></a> if you’d like to know more about my work at the NSP!</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- REFLECTION -->
+      <section class="cs-section" id="reflection">
+        <div class="small-container">
+          <div class="section-label">Reflection</div>
+          <h2>How can we measure success?</h2>
+
+          <div class="prose top-s">
+            <p>While our scope didn't extend to handoff, we documented our process thoroughly — delivering a prototype, implementation demo, final presentation, and report. I also took it a step further by thinking ahead to post-launch, identifying metrics we could track to measure success over time:</p>
+          </div>
+
+          <div class="three-grid top-m">
+            <div class="grid-panel-2">
+              <h4>Adoption and reach</h4>
+              <p>Number of new users captured in X weeks within launch.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Consistent learning</h4>
+              <p>More than X% amount of students achieve a month long streak.</p>
+            </div>
+  
+            <div class="grid-panel-2">
+              <h4>Classmate usage rate</h4>
+              <p>Adoption from music teachers to use in their lessons.</p>
+            </div>
+          </div>
+
+          <div class="prose top-m">
+            <p>And after presenting our final designs, we were glad to receive positive feedback from both the Noteful team and our peers :)</p>
+          </div>
+
+          <img src="noteful/feedback.png" class="top-s">
+        </div>
+
+        <div class="small-container center-container top-xl">
+          <div class="section-label">Takeaways</div>
+          <h2>Design is a balancing act.</h2>
+        </div>
+
+        <div class="two-grid top-m">
+          <div class="grid-panel-3">
+            <h4>Dig for the problem!</h4>
+            <p class="top-xs">Our original scope was a dashboard redesign — but had we taken that at face value, we would've built the wrong thing.</p>
+            <p class="top-xs">Asking "is this actually the root problem?" early on is what led us to a solution that could genuinely serve Noteful's users long-term. It's a question I want to make a habit.</p>
+          </div>
+
+          <div class="grid-panel-3">
+            <h4>Design should be intentional.</h4>
+            <p class="top-xs">Best solutions come from being intentional, taking the time to think about which features truly matter and which don’t so we don't overcomplicate the experience.</p>
+            <p class="top-xs">I’ve come to see design as a balancing act: it only works when impact, clarity, and constraints all align.</p>
+          </div>
+        </div>
+
+        <div class="small-container thank-you top-xl">
+          <div>And a thank you to my teammates Angie Li, Lucy Li, Sophie McGrady, and Vivian Yuan, as well as Becky Billock. Working on this project was definitely a highlight of my senior year, and I'm incredibly honored to have been a part of this team!</div>
+        </div>
+
+        <div class="small-container top-xl">
+          <div class="section-label">Psst don't leave yet :)</div>
+          <h3>And... what would I do differently?</h3>
+          <div class="prose top-s">
+            <p>Honestly? Build a design system from the start. At the time, I didn't fully understand what a design system was, and looking back at the designs now, the inconsistencies are hard to miss. It's a humbling reminder of how much I've grown since.</p>
+            
+            <p>After working across multiple projects and building out design systems from the ground up, I now know that consistency is what makes a product feel cohesive, scalable, and trustworthy. Future me would've started there.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+ 
+    <!-- ════════ RIGHT NOTES COL ════════ -->
+    <aside class="notes-col" id="notesCol" aria-label="Margin notes"></aside>
+ 
+  </div>
+  <div class="footer">
+    <div class="footer-container">
+      <div>
+        <div class="footer-text">Thank you for visiting <3</div>
+        <div class="section-label">design + code by wendy</div>
+
+        <div class="email">
+          <div class="email-address">liwndy@gmail.com</div>
+          <a class="email-btn" href="mailto:liwndy@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="section-label">Socials</div>
+        <a href="mailto:liwndy@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/wantongl/" target=“_blank”>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  
+<script>
+  const NOTES = [
+    {
+    id:    'note-1',
+    text:  'However, through various research and ideation methods, we uncovered a much bigger opportunity... 👀'
+    },
+    {
+    id:    'note-2',
+    text:  'I chose the 3 methods intentionally — lit review to understand the theory, competitive analysis to map the landscape, and interviews to hear from past user experiences!'
+    },
+    {
+    id:    'note-3',
+    text:  'This was done independently so that we would not be affected by each others ideas 🤓'
+    },
+    {
+    id:    'note-4',
+    text:  'Island view was inspired by my addiction aka Candy Crush 🍬'
+    },
+  ];
+</script>
+
+<script src="app.js"></script>
+<script src="sidenote.js"></script>
+
+<script>
+  buildNotes(NOTES);
+</script>
+</body>
+</html>
