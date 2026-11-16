@@ -391,12 +391,28 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 48px 24px;
+    align-items: start;
 }
 
+/* Masonry columns (built by masonry.js) */
+.home-grid.is-masonry {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.masonry-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Covers keep their own shape; width/height in the HTML reserve the space */
 .project-media {
     display: block;
     margin-top: 24px;
-    aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -404,8 +420,7 @@ a {
 .project-media img,
 .project-media video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
