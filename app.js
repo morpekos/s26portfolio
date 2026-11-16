@@ -3,6 +3,7 @@
 ══════════════════════════════════════════════ */
 const bar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
+    if (!bar) return; // pages without a progress bar (e.g. home)
     const s = document.documentElement.scrollTop;
     const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     bar.style.width = (s / h * 100) + '%';
@@ -34,21 +35,6 @@ tocLinks.forEach(a => {
         ?.scrollIntoView({ behavior: 'smooth' });
     });
 });
-
-/* ══════════════════════════════════════════════
-    INIT
-══════════════════════════════════════════════ */
-buildNotes();
-
-// Position after fonts + layout settle
-window.addEventListener('load', () => {
-    positionNotes();
-});
-window.addEventListener('resize', () => {
-    positionNotes();
-});
-// Also reposition on scroll (anchors can shift if content lazy-loads)
-window.addEventListener('scroll', positionNotes, { passive: true });
 
 /* ══════════════════════════════════════════════
     IMAGE SLIDESHOW
