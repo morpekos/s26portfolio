@@ -680,3 +680,159 @@ a {
 }
 
 /* ── IMAGE CAROUSEL ── */
+
+/* ══════════════════════════════════════════════
+    ABOUT LETTER (modal)
+══════════════════════════════════════════════ */
+
+/* The dialog fills the screen and scrolls; the letter sits inside it */
+.letter-modal {
+    width: 100%; height: 100%;
+    max-width: none; max-height: none;
+    margin: 0; border: 0; background: transparent;
+    padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px));
+    overflow-y: auto; overscroll-behavior: contain;
+}
+.letter-modal::backdrop {
+    background: rgb(26 26 26 / .4);
+    backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+}
+html:has(.letter-modal[open]) { overflow: hidden; }
+
+/* The paper */
+.letter {
+    position: relative;
+    max-width: 780px;
+    margin: 120px auto 64px;
+    padding: 72px 72px 72px;
+    background: #fffefa;
+    border: 1px solid rgb(0 0 0 / .04);
+    isolation: isolate;
+    color: var(--text);
+    transform-origin: top center;
+}
+
+/* Folded-in-thirds shading + crease lines */
+.letter::before,
+.letter::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    z-index: -1; /* on the paper, behind the words */
+}
+/* Each third catches the light a little differently, like paper that was folded */
+.letter::before {
+    background:
+        /* top third: darkens toward the first fold */
+        linear-gradient(to bottom, rgb(0 0 0 / 0) 55%, rgb(0 0 0 / .07)) top / 100% 33.34% no-repeat,
+        /* middle third: bright right after the fold, darkens toward the second fold */
+        linear-gradient(to bottom, rgb(255 255 255 / 0), rgb(0 0 0 / .015) 40%, rgb(0 0 0 / .06)) center / 100% 33.34% no-repeat,
+        /* bottom third: shaded just after the fold, then fades out */
+        linear-gradient(to bottom, rgb(0 0 0 / .05), rgb(0 0 0 / 0) 35%) bottom / 100% 33.34% no-repeat;
+}
+/* The creases: a dark line with a thin highlight underneath */
+.letter::after {
+    background:
+        linear-gradient(to bottom,
+            transparent calc(33.33% - 1px), rgb(0 0 0 / .12) calc(33.33% - 1px), rgb(0 0 0 / .12) 33.33%,
+            rgb(255 255 255 / .9) 33.33%, rgb(255 255 255 / .9) calc(33.33% + 1px), transparent calc(33.33% + 1px)),
+        linear-gradient(to bottom,
+            transparent calc(66.66% - 1px), rgb(0 0 0 / .12) calc(66.66% - 1px), rgb(0 0 0 / .12) 66.66%,
+            rgb(255 255 255 / .9) 66.66%, rgb(255 255 255 / .9) calc(66.66% + 1px), transparent calc(66.66% + 1px));
+}
+
+/* Opening: backdrop fades in (the paper unfold is in letter.js) */
+.letter-modal[open]::backdrop { animation: letter-fade .3s ease both; }
+@keyframes letter-fade { from { opacity: 0; } }
+
+/* While unfolding, the real letter is hidden and three paper panels play the animation */
+.letter.is-folding { visibility: hidden; }
+.fold-stage {
+    visibility: visible;
+    position: absolute; inset: 0;
+    transform-origin: 50% 0;
+    pointer-events: none;
+}
+.fold-inner {
+    position: absolute; inset: 0;
+    perspective: 1800px; perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+}
+.fold-panel {
+    position: absolute; left: 0; right: 0;
+    transform-style: preserve-3d;
+}
+.fold-face, .fold-back {
+    position: absolute; inset: 0; overflow: hidden;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.fold-back { background: #f4f3ee; transform: rotateX(180deg); }
+.fold-face .letter {
+    position: absolute; left: 0; margin: 0; max-width: none;
+    visibility: visible; animation: none; box-shadow: none;
+}
+.fold-face .letter-photo { visibility: hidden; } /* keeps its space so text wraps the same */
+
+/* Polaroid drops in once the paper is open */
+.letter-photo.is-dropping { animation: photo-drop .55s cubic-bezier(.3, 1.4, .5, 1) both; }
+@keyframes photo-drop {
+    from { opacity: 0; transform: translateY(-40px) rotate(-6deg); }
+    to   { opacity: 1; transform: rotate(2.5deg); }
+}
+
+/* Polaroid sticking out over the top edge */
+.letter-photo {
+    position: relative; z-index: 1;
+    float: right; width: 260px;
+    margin: -132px -28px 24px 40px;
+    padding: 24px 24px 14px;
+    background: var(--panel2);
+    box-shadow: 0 2px 4px rgb(0 0 0 / .06), 0 14px 30px -12px rgb(0 0 0 / .3);
+    transform: rotate(2.5deg);
+}
+.letter-photo img { display: block; width: 100%; border-radius: 0; }
+.letter-photo figcaption {
+    font-family: "Cedarville Cursive", cursive; font-size: 18px;
+    text-align: center; margin-top: 14px;
+}
+.letter-tape {
+    position: absolute; top: -12px; left: 50%;
+    width: 90px; height: 26px;
+    background: rgb(226 225 212 / .85);
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+/* Words */
+.letter-greeting { font-size: 18px; }
+.letter-title {
+    font-family: Sohne, sans-serif; font-weight: 500;
+    font-size: 44px; letter-spacing: -0.04em; line-height: 1.1;
+    margin: 10px 0 32px;
+}
+.letter p { font-family: Tiempos; font-size: 19px; line-height: 1.55; margin-bottom: 24px; }
+.letter-signoff { margin-top: 36px; font-size: 18px; }
+.letter-signature { font-family: "Cedarville Cursive", cursive; font-size: 34px; margin-top: 4px; }
+
+/* Close button stays in the corner of the screen */
+.letter-close {
+    position: fixed; z-index: 2;
+    top: max(20px, env(safe-area-inset-top, 0px)); right: max(20px, env(safe-area-inset-right, 0px));
+    width: 40px; height: 40px; border-radius: 50%; border: 0;
+    background: #fafaf6; color: var(--text);
+    font-size: 24px; line-height: 1; cursor: pointer;
+    box-shadow: 0 4px 14px -4px rgb(0 0 0 / .35);
+    transition: transform .2s;
+}
+.letter-close:hover { transform: rotate(90deg); }
+.letter-close:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+@media (max-width: 700px) {
+    .letter { margin-top: 150px; padding: 40px 22px 48px; }
+    .letter-photo { width: 140px; margin: -88px -10px 16px 18px; padding: 12px 12px 8px; }
+    .letter-photo figcaption { font-size: 12px; margin-top: 8px; }
+    .letter-tape { width: 60px; height: 18px; top: -8px; }
+    .letter-title { font-size: 30px; margin-bottom: 24px; }
+    .letter p { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .letter-modal[open] .letter, .letter-modal[open]::backdrop { animation: none; }
+}
