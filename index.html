@@ -29,7 +29,14 @@
   <div class="home-page">
     <div class="home-hero">
       <div class="construction">portfolio under construction</div>
-      <h1><img src="nom.gif" class="inline-img"> Wendy Li is a product designer driven by <i>curiosity</i>. I explore the <span style="color:#8e8c84;"><i>why</i></span> behind design to make decisions that are purposeful.</h1>
+      <h1 class="boil"><img src="nom.gif" class="inline-img" alt=""> Wendy Li is a product designer driven by <i>curiosity</i>. I explore the <span style="color:#8e8c84;"><i>why</i></span> behind design to make decisions that are purposeful.</h1>
+
+      <!-- Wobbly-edge filters for the boil effect (invisible) -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="boil-0"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+        <filter id="boil-1"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="2"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+        <filter id="boil-2"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+      </svg>
       <h2>Most recently @ Lyft. <a href="#"><span style="border-bottom:2px dotted #a19f96;">Talk to me</span></a> about anything design, Pokemon, or my go-to Molly Tea order :)</h2>
     </div>
 
@@ -150,6 +157,7 @@
     window.addEventListener('resize', initMasonry);
   </script>
 
+<script src="boil.js"></script>
 <script src="app.js"></script>
 <script src="sidenote.js"></script>
 
