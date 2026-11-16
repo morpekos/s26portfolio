@@ -368,6 +368,16 @@ a {
     color: var(--text);
 }
 
+/* Boil effect (see boil.js) */
+.boil-word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.boil-letter {
+    display: inline-block;
+}
+
 .inline-img {
     display: inline-block;
     width: 36px;
