@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -412,6 +413,32 @@
   </div>
 </footer>
 
+<!-- ===== ABOUT LETTER (opens when an About link is clicked; see letter.js) ===== -->
+<dialog class="letter-modal" id="aboutLetter" aria-labelledby="letterTitle">
+  <button class="letter-close" type="button" aria-label="Close letter">×</button>
+
+  <article class="letter">
+    <figure class="letter-photo">
+      <span class="letter-tape" aria-hidden="true"></span>
+      <img src="moi.jpg" alt="Wendy at a lake at sunset">
+      <figcaption>thanks for coming :D</figcaption>
+    </figure>
+
+    <div class="letter-greeting">Dear Friends,</div>
+    <h2 class="letter-title" id="letterTitle">Tis is a lil' bit about me 👋</h2>
+
+      <p>My work sits at the intersection of curiosity, strategy, and empathy — I'm drawn to understanding how products create real value for the people who use them and the businesses that build them. I believe good design starts in the questions you ask and the context you seek out. Whether shaping product strategy from the ground up or refining an existing experience, I aim to create solutions that are both intentional and built to last.</p>
+
+      <p>Growing up spending hours and hours tinkering around in Photoshop, I fell in love with the process of creation: experimenting both inside and outside the box, iterating and iterating, and discovering how small details could completely change how something feels. Over time, that early obsession with craft grew into a genuine curiosity about why people respond to design the way they do, and how thoughtful design can shape experiences that stay with people long after the interaction ends.</p>
+
+      <p>Now, as I finish my master’s degree in Information Experience Design, I’m continuing to deepen my technical and creative practice. As I get started in my career, I excited to keep designing for products that help people navigate complexity with clarity. Outside of design, you can find me catching Pokemon, designing posters on Photoshop, spending time with my family, and going to happy hour with friends :)</p>
+
+    <div class="letter-signoff">With love,</div>
+    <div class="letter-signature">Wendy Li</div>
+  </article>
+</dialog>
+
+
 <script>
   const NOTES = [
     {
@@ -435,5 +462,6 @@
 <script>
   buildNotes(NOTES);
 </script>
+<script src="letter.js"></script>
 </body>
 </html>
