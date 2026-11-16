@@ -95,20 +95,42 @@ a {
     color: var(--text); text-decoration: none;
     transition: color 0.3s;
 }
-.nav-link:hover, a:hover { color: var(--muted); }
 
 .nav-right, .nav-left {
     display: flex;
     align-items: center;
-    gap: 28px;
 }
 
 .nav-left { gap: 12px; }
+.nav-right { gap: 4px; }
 
-.nav-btn {
-    padding: 6px 12px; background: var(--text); border-radius: 12px;
-    color: #fafaf6; font-size: 13px;
+/* Keep header items dark on hover (overrides the global a:hover) */
+.topnav a:hover { color: var(--text); }
+
+/* Pill highlight on hover */
+.nav-right .nav-link {
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: background 0.2s;
 }
+.nav-right .nav-link:hover { background: var(--panel2); }
+
+/* Reach Out button with arrow */
+.nav-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; padding: 7px 14px;
+    background: var(--text); color: #fafaf6;
+    border-radius: 999px; font-size: 13px;
+    transition: background 0.2s;
+}
+.nav-btn::after {
+    content: "↗";
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.topnav .nav-btn:hover { background: var(--footer); color: #fafaf6; }
+.nav-btn:hover::after { transform: translate(2px, -2px); }
+
 
 /* ── START ── */
 .project-hero {
