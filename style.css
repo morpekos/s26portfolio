@@ -88,6 +88,24 @@ a {
     justify-content: space-between;
 }
 
+/* Soft fade hanging below the header */
+.topnav::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 100%;                 /* starts right at the bottom of the header */
+    height: 40px;              /* how long the fade is: bigger = smoother */
+    pointer-events: none;      /* clicks go through to the page */
+    background: linear-gradient(
+        to bottom,
+        rgb(250 250 246 / 1)    0%,
+        rgb(250 250 246 / .85) 25%,
+        rgb(250 250 246 / .5)  55%,
+        rgb(250 250 246 / .15) 80%,
+        rgb(250 250 246 / 0)  100%
+    );
+}
+
 .logo { width: 20px; }
 
 .nav-link {
@@ -326,16 +344,15 @@ a {
 .top-xxs { margin-top: 4px; }
 
 /* ── FOOTER ── */
-/* ── NEW FOOTER ── */
 .site-footer {
     margin-top: 96px; padding: 48px 32px 0;
-    border-top: 1px solid var(--border);
     overflow: hidden;
 }
 
 .sf-grid {
     max-width: 1300px; margin: auto;
-    display: grid; grid-template-columns: 1fr auto; gap: 32px;
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: end; gap: 32px;
     font-size: 15px;
 }
 
@@ -343,18 +360,16 @@ a {
 .sf-sub { color: var(--muted); margin-top: 6px; }
 .sf-time { color: var(--text); font-variant-numeric: tabular-nums; }
 
-.sf-label {
-    font-size: 12px; font-weight: 500; text-transform: uppercase;
-    letter-spacing: .07em; color: var(--accent); margin-bottom: 10px;
+/* Email + LinkedIn side by side */
+.sf-contact {
+    display: flex; align-items: center; gap: 8px;
 }
-.sf-col { min-width: 160px; }
-.sf-col a { display: block; width: fit-content; margin-bottom: 6px; }
 
 /* Email pill */
 .sf-email-pill {
     display: inline-flex; align-items: center; gap: 12px;
-    margin-top: 28px; padding: 6px 6px 6px 18px;
-    background: var(--panel2); border: 1px solid var(--border);
+    padding: 6px 6px 6px 18px;
+    background: var(--panel2);
     border-radius: 999px; max-width: 100%;
 }
 .sf-email { font-size: 16px; }
@@ -367,15 +382,19 @@ a {
 .sf-copy:hover { background: var(--footer); }
 .sf-copy:active { transform: scale(.95); }
 
-.sf-col a {
-    padding: 4px 10px;
-    margin-left: -10px;
-    border-radius: 999px;
-    transition: background 0.2s;
-}
-.sf-col a:hover {
+/* Round LinkedIn button, matches the email pill */
+.sf-icon {
+    display: grid; place-items: center; flex-shrink: 0;
+    width: 50px; height: 50px; border-radius: 50%;
     background: var(--panel2);
     color: var(--text);
+    transition: background .2s, transform .2s;
+}
+.sf-icon svg { width: 18px; height: 18px; fill: currentColor; }
+.sf-icon:hover {
+    background: #e2e1d4;
+    color: var(--text);
+    transform: translateY(-2px);
 }
 
 /* Giant name: letters hop on hover */
@@ -392,12 +411,11 @@ a {
 .sf-wordmark span:hover { transform: translateY(-10%) rotate(-4deg); }
 
 @media (prefers-reduced-motion: reduce) {
-    .sf-heart { animation: none; }
     .sf-wordmark span { transition: none; }
 }
 
 @media (max-width: 740px) {
-    .sf-grid { grid-template-columns: 1fr; row-gap: 36px; }
+    .sf-grid { grid-template-columns: 1fr; row-gap: 24px; align-items: start; }
     .sf-title { font-size: 28px; }
 }
 
