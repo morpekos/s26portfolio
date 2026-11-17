@@ -547,7 +547,7 @@ a {
 .me-image img { border-radius: 0px; }
 .me-image p {
     text-align: center; line-height: 1; margin-top: 12px;
-    font-family: Cedarville Cursive;
+    font-family: "Homemade Apple", cursive;
 }
 
 .signature {
@@ -835,7 +835,12 @@ html:has(.letter-modal[open]) { overflow: hidden; }
 }
 .letter p { font-family: Tiempos; font-size: 19px; line-height: 1.55; margin-bottom: 24px; }
 .letter-signoff { margin-top: 36px; font-size: 18px; }
-.letter-signature { font-family: "Cedarville Cursive", cursive; font-size: 34px; margin-top: 4px; }
+.letter-signature {
+    font-family: "Homemade Apple", cursive;
+    font-size: 26px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
 
 /* Close button stays in the corner of the screen */
 .letter-close {
