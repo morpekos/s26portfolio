@@ -517,17 +517,22 @@ a {
     margin: 0 6px;
 }
 
+/* Project grid: 2 columns, up to 1300px wide.
+   --cols tells masonry.js how many columns to build. */
 .home-grid {
+    --cols: 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px 24px;
+    grid-template-columns: repeat(2, 1fr);   /* used if the script doesn't run */
+    gap: 48px 32px;
     align-items: start;
+    max-width: 1300px;
+    margin-inline: auto;
 }
 
 /* Masonry columns (built by masonry.js) */
 .home-grid.is-masonry {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     align-items: flex-start;
 }
 
@@ -542,7 +547,6 @@ a {
 /* Covers keep their own shape; width/height in the HTML reserve the space */
 .project-media {
     display: block;
-    margin-top: 24px;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -552,8 +556,23 @@ a {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform .45s cubic-bezier(.2, .7, .2, 1);
 }
+
+/* Company + type as small pills on the cover */
+.card-tags {
+    position: absolute; z-index: 2;
+    top: 24px; left: 24px; right: 24px;   /* 12px card padding + 12px inset on the cover */
+    display: flex; flex-wrap: wrap; gap: 6px;
+    pointer-events: none;
+}
+.card-tags span {
+    font-size: 12px; font-weight: 500;
+    padding: 5px 10px; border-radius: 999px;
+    background: rgb(250 250 246 / .88);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+
+.card-title { margin-top: 18px; }
 
 .home-page h3 {
     font-size: 24px; font-weight: 500; font-family: Tiempos;
@@ -680,10 +699,6 @@ a {
     .inline-note { display: block; }
 }
 
-@media (max-width: 1040px) {
-    .home-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 900px) {
     .page-wrap { grid-template-columns: 1fr; padding: 20px 20px 80px; gap: 24px; }
 
@@ -700,7 +715,7 @@ a {
 
     .prose p { font-size: 16px; }
 
-    .home-grid { grid-template-columns: 1fr; }
+    .home-grid { --cols: 1; grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
     .grid-panel-2 { border-right: none; padding-right: 0px; }
 }
@@ -892,7 +907,7 @@ html:has(.letter-modal[open]) body::after { display: none; }
 
 /* ══════════════════════════════════════════════
     PROJECT CARD HOVER
-    Beige pill behind the card + the cover gently shrinks.
+    Beige pill behind the card.
 ══════════════════════════════════════════════ */
 .project-card {
     position: relative;
@@ -905,10 +920,3 @@ html:has(.letter-modal[open]) body::after { display: none; }
 /* The whole card is clickable: the cover link stretches over it */
 .project-card .project-media::after { content: ""; position: absolute; inset: 0; z-index: 1; }
 
-.project-card:hover .project-media img,
-.project-card:hover .project-media video { transform: scale(.95); }
-
-@media (prefers-reduced-motion: reduce) {
-    .project-card:hover .project-media img,
-    .project-card:hover .project-media video { transform: none; }
-}

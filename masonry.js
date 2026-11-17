@@ -10,11 +10,10 @@
     const cards = [...grid.children];
     let current = 0;
 
-    // How many columns for the current screen width (matches style.css)
+    // How many columns: read from --cols in style.css, so the layout lives in one place
     function columnCount() {
-        if (window.innerWidth <= 740) return 1;
-        if (window.innerWidth <= 1040) return 2;
-        return 3;
+        const cols = parseInt(getComputedStyle(grid).getPropertyValue('--cols'), 10);
+        return cols > 0 ? cols : 2;
     }
 
     // A card's height relative to its width, from the cover's width/height
