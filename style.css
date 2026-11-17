@@ -823,7 +823,7 @@ html:has(.letter-modal[open]) { overflow: hidden; }
     position: absolute; top: -12px; left: 50%;
     width: 90px; height: 26px;
     background: rgb(226 225 212 / .85);
-    transform: translateX(-50%) rotate(-3deg);
+    transform: translateX(-50%);   /* no extra rotation: it tilts with the photo */
 }
 
 /* Words */
