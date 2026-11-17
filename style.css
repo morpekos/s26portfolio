@@ -836,3 +836,31 @@ html:has(.letter-modal[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
     .letter-modal[open] .letter, .letter-modal[open]::backdrop { animation: none; }
 }
+
+/* ══════════════════════════════════════════════
+    GRAIN TEXTURE
+    A fixed layer of fine noise over the whole page (and over the About letter).
+    Change --grain-opacity to make it stronger or softer.
+══════════════════════════════════════════════ */
+:root {
+    --grain-opacity: 0.2;
+    --grain-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.16  0 0 0 2.4 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+body::after,
+.letter-modal::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;      /* clicks go straight through */
+    opacity: var(--grain-opacity);
+    mix-blend-mode: multiply;  /* specks darken slightly, like ink in paper */
+    background-image: var(--grain-image);
+    background-size: 240px 240px;
+}
+body::after { z-index: 9999; }
+
+/* The About letter opens in its own top layer, above the page grain,
+   so it gets its own copy. The page copy hides meanwhile so it isn't doubled. */
+.letter-modal::after { z-index: 3; }
+html:has(.letter-modal[open]) body::after { display: none; }
