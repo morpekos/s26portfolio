@@ -106,8 +106,6 @@ a {
     );
 }
 
-.logo { width: 20px; }
-
 .nav-link {
     font-size: 14px; font-weight: 500;
     color: var(--text); text-decoration: none;
@@ -119,7 +117,6 @@ a {
     align-items: center;
 }
 
-.nav-left { gap: 10px; }
 .nav-right { gap: 4px; }
 
 /* Keep header items dark on hover (overrides the global a:hover) */
@@ -133,14 +130,55 @@ a {
 }
 .nav-right .nav-link:hover { background: var(--panel2); }
 
-/* Same pill on the logo + name */
+/* Handwritten logo: signs itself on hover */
 .nav-left {
-    padding: 6px 12px 6px 8px;
-    margin-left: -8px;          /* keeps the logo lined up with the page edge */
-    border-radius: 999px;
-    transition: background 0.2s;
+    padding: 6px 0;
+    text-decoration: none;
 }
-.nav-left:hover { background: var(--panel2); }
+.logo-script {
+    --sig-ink: var(--text);
+    --sig-a: #5c574f;   /* warm dark */
+    --sig-b: #8e8c84;   /* taupe */
+    --sig-c: #b5ad9c;   /* light warm grey */
+
+    display: inline-block;
+    font-family: "Homemade Apple", cursive;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+    transform: translateY(2px);   /* the font sits high, nudge it down a touch */
+
+    /* painted with a wide gradient; at rest only the solid ink part shows */
+    background-image: linear-gradient(90deg,
+        var(--sig-ink) 0%, var(--sig-ink) 30%,
+        var(--sig-a) 42%, var(--sig-b) 50%, var(--sig-c) 58%,
+        var(--sig-ink) 70%, var(--sig-ink) 100%);
+    background-size: 340% 100%;
+    background-position: 0% 0;
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent; -webkit-text-fill-color: transparent;
+    padding: 6px 4px 8px; margin: -6px -4px -8px;   /* room for loops and tails so nothing gets clipped */
+}
+.nav-left:hover .logo-script,
+.nav-left:focus-visible .logo-script {
+    animation:
+        sig-write .9s cubic-bezier(.45, .05, .3, 1) both,
+        sig-ink 1.3s ease-out both;
+}
+/* writes itself from left to right */
+@keyframes sig-write {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
+}
+/* the ink gradient sweeps across, then settles back to solid */
+@keyframes sig-ink {
+    from { background-position: 100% 0; }
+    to   { background-position: 0% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-left:hover .logo-script,
+    .nav-left:focus-visible .logo-script { animation: none; }
+}
 
 /* Reach Out button with arrow */
 .nav-btn {
