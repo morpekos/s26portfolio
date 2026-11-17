@@ -81,7 +81,6 @@ a {
 }
 
 /* ── NAVIGATION ── */
-/* ── NAVIGATION ── */
 .topnav {
     position: sticky; top: 0; z-index: 100;
     background: #fafaf6; padding: 0 32px; height: 52px;
@@ -102,7 +101,7 @@ a {
     align-items: center;
 }
 
-.nav-left { gap: 12px; }
+.nav-left { gap: 10px; }
 .nav-right { gap: 4px; }
 
 /* Keep header items dark on hover (overrides the global a:hover) */
@@ -115,6 +114,15 @@ a {
     transition: background 0.2s;
 }
 .nav-right .nav-link:hover { background: var(--panel2); }
+
+/* Same pill on the logo + name */
+.nav-left {
+    padding: 6px 12px 6px 8px;
+    margin-left: -8px;          /* keeps the logo lined up with the page edge */
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+.nav-left:hover { background: var(--panel2); }
 
 /* Reach Out button with arrow */
 .nav-btn {
