@@ -890,3 +890,28 @@ body::after { z-index: 9999; }
    so it gets its own copy. The page copy hides meanwhile so it isn't doubled. */
 .letter-modal::after { z-index: 3; }
 html:has(.letter-modal[open]) body::after { display: none; }
+
+/* ══════════════════════════════════════════════
+    PROJECT CARD HOVER
+    Beige pill behind the card + the cover gently shrinks.
+══════════════════════════════════════════════ */
+.project-card {
+    position: relative;
+    padding: 12px; margin: -12px;   /* the pill reaches past the edges without moving anything */
+    border-radius: 16px;
+    transition: background .25s;
+}
+.project-card:hover { background: var(--panel2); }
+
+/* The whole card is clickable: the cover link stretches over it */
+.project-card .project-media::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+
+.project-media img,
+.project-media video { transition: transform .45s cubic-bezier(.2, .7, .2, 1); }
+.project-card:hover .project-media img,
+.project-card:hover .project-media video { transform: scale(.95); }
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card:hover .project-media img,
+    .project-card:hover .project-media video { transform: none; }
+}
