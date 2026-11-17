@@ -8,11 +8,14 @@
     --footer:      #333230;
     --muted:       #6e6d69;
     --accent:      #8e8c84;
-    --note-bg:     #fafafa;
     --col-left:    240px;
     --col-right:   240px;
     --col-gap:     40px;
     --nav-h:       52px;
+
+    /* grain texture (see GRAIN TEXTURE near the end) */
+    --grain-opacity: 0.2;
+    --grain-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.16  0 0 0 2.4 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 html { scroll-behavior: smooth; }
@@ -213,6 +216,8 @@ a {
 }
 
 .project-logo { width: 32px; height: 32px; border-radius: 4px; }
+.project-name { font-weight: 500; }
+.project-type { color: #888; }
 
 /* ── 3-COL LAYOUT ── */
 .page-wrap {
@@ -237,7 +242,7 @@ a {
     text-decoration: none; display: block;
     border-bottom: 1px solid var(--border); padding: 8px 0;
 }
-.toc-list li:last-child a{ border-bottom: none; }
+.toc-list li:last-child a { border-bottom: none; }
 .toc-list a:hover { color: var(--text); }
 .toc-list a.active { color: var(--text); border-left-color: var(--text); font-weight: 500; }
 
@@ -394,7 +399,7 @@ a {
     font-size: 15px;
 }
 
-.sf-title { font-family: Homemade Apple; font-size: 32px; letter-spacing: -0.02em; line-height: 1.1; }
+.sf-title { font-family: "Homemade Apple", cursive; font-size: 32px; letter-spacing: -0.02em; line-height: 1.1; }
 .sf-sub { color: var(--muted); margin-top: 6px; }
 .sf-time { color: var(--text); font-variant-numeric: tabular-nums; }
 
@@ -431,7 +436,6 @@ a {
 .sf-icon svg { width: 18px; height: 18px; fill: currentColor; }
 .sf-icon:hover {
     background: #e2e1d4;
-    color: var(--text);
     transform: translateY(-2px);
 }
 
@@ -488,6 +492,12 @@ a {
     color: var(--text);
 }
 
+.hero-name { color: var(--accent); font-weight: 500; }
+
+/* Dotted underline for highlighted words and links */
+.dotted { border-bottom: 2px dotted #a19f96; }
+.dotted--thick { border-bottom-width: 4px; }
+
 /* Boil effect (see boil.js) */
 .boil-word {
     display: inline-block;
@@ -542,26 +552,20 @@ a {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform .45s cubic-bezier(.2, .7, .2, 1);
 }
 
 .home-page h3 {
-    font-size: 24px; font-weight: 500; font-family: tiempos;
+    font-size: 24px; font-weight: 500; font-family: Tiempos;
 }
 
 .home-page h4 {
     font-weight: 400; font-size: 15px; color: var(--muted);
 }
 
-.construction {
-    font-size: 11px; background: #e2e1d4; font-weight: 500;
-    width: fit-content; margin: auto; padding: 8px 12px;
-    border-radius: 120px; text-transform: uppercase;
-}
-
 /* ══════════════════════════════════════════
     ABOUT PAGE
     ══════════════════════════════════════════ */
-
 
 .about {
     margin: auto 20px;
@@ -589,7 +593,7 @@ a {
 }
 
 .signature {
-    font-family: Homemade Apple; font-size: 24px;
+    font-family: "Homemade Apple", cursive; font-size: 24px;
 }
 
 .about-section h1 {
@@ -650,25 +654,8 @@ a {
     padding-left: 8px;
 }
 .sidenote-inner p {
-    font-size: 13px; line-height: 1.5; 
+    font-size: 13px; line-height: 1.5;
     color: #666;
-}
-
-/* connector dot on the anchor element */
-.has-note {
-    position: relative;
-}
-.has-note::after {
-    content: '';
-    position: absolute;
-    right: -calc(var(--col-gap) / 2 + 4px);
-    top: 50%; transform: translateY(-50%);
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--border);
-    pointer-events: none;
-    /* hidden by default, shown on ≥md */
-    display: none;
 }
 
 /* ── INLINE NOTE (mobile fallback) ── */
@@ -683,28 +670,12 @@ a {
     font-size: 17px; line-height: 1.5; color: var(--muted); font-weight: 500;
 }
 
-/* stat row */
-.stat-row {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 10px; margin: 20px 0;
-}
-.stat-card {
-    border: 1px solid var(--border);
-    border-radius: 4px; padding: 18px 14px; text-align: center;
-    transition: border-color .2s;
-}
-.stat-card:hover { border-color: var(--border); }
-.stat-num { font-size: 28px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 4px; }
-.stat-label { font-size: 11px; color: var(--muted); line-height: 1.4; }
-
 /* ── RESPONSIVE ── */
 
 /* tablet: hide notes col, show inline notes */
 @media (max-width: 1024px) {
     :root { --col-right: 0px; --col-gap: 48px; }
-    .page-wrap {
-    grid-template-columns: var(--col-left) 1fr;
-    }
+    .page-wrap { grid-template-columns: var(--col-left) 1fr; }
     .notes-col { display: none; }
     .inline-note { display: block; }
 }
@@ -714,36 +685,25 @@ a {
 }
 
 @media (max-width: 900px) {
-    .page-wrap {
-        grid-template-columns: 1fr; padding: 20px 20px 80px; gap: 24px;
-        }
+    .page-wrap { grid-template-columns: 1fr; padding: 20px 20px 80px; gap: 24px; }
 
     .sidebar-left { display: none; }
 }
 
 /* mobile: single column */
 @media (max-width: 740px) {
-    .page-wrap {
-    grid-template-columns: 1fr; padding: 20px 20px 80px; gap: 24px;
-    }
-
     .topnav { padding: 0 20px; }
-    .sidebar-left { display: none; }
 
     .three-grid { grid-template-columns: 1fr; }
     .four-grid { grid-template-columns: 1fr 1fr; }
     .two-grid { display: flex; flex-direction: column; }
 
-    h1.section-title { font-size: 26px; }
     .prose p { font-size: 16px; }
-    .footer-container { grid-template-columns: 1fr; }
 
     .home-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
     .grid-panel-2 { border-right: none; padding-right: 0px; }
 }
-
-/* ── IMAGE CAROUSEL ── */
 
 /* ══════════════════════════════════════════════
     ABOUT LETTER (modal)
@@ -831,7 +791,7 @@ html:has(.letter-modal[open]) { overflow: hidden; }
 .fold-back { background: #f4f3ee; transform: rotateX(180deg); }
 .fold-face .letter {
     position: absolute; left: 0; margin: 0; max-width: none;
-    visibility: visible; animation: none; box-shadow: none;
+    visibility: visible;
 }
 .fold-face .letter-photo { visibility: hidden; } /* keeps its space so text wraps the same */
 
@@ -854,7 +814,7 @@ html:has(.letter-modal[open]) { overflow: hidden; }
 }
 .letter-photo img { display: block; width: 100%; border-radius: 0; }
 .letter-photo figcaption {
-    font-family: Homemade Apple, cursive; font-size: 16px;
+    font-family: "Homemade Apple", cursive; font-size: 16px;
     text-align: center; margin-top: 14px;
 }
 .letter-tape {
@@ -903,18 +863,14 @@ html:has(.letter-modal[open]) { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .letter-modal[open] .letter, .letter-modal[open]::backdrop { animation: none; }
+    .letter-modal[open]::backdrop { animation: none; }
 }
 
 /* ══════════════════════════════════════════════
     GRAIN TEXTURE
     A fixed layer of fine noise over the whole page (and over the About letter).
-    Change --grain-opacity to make it stronger or softer.
+    Change --grain-opacity (top of this file) to make it stronger or softer.
 ══════════════════════════════════════════════ */
-:root {
-    --grain-opacity: 0.2;
-    --grain-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.16  0 0 0 2.4 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
 
 body::after,
 .letter-modal::after {
@@ -949,8 +905,6 @@ html:has(.letter-modal[open]) body::after { display: none; }
 /* The whole card is clickable: the cover link stretches over it */
 .project-card .project-media::after { content: ""; position: absolute; inset: 0; z-index: 1; }
 
-.project-media img,
-.project-media video { transition: transform .45s cubic-bezier(.2, .7, .2, 1); }
 .project-card:hover .project-media img,
 .project-card:hover .project-media video { transform: scale(.95); }
 
